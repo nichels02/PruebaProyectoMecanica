@@ -58,6 +58,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "SujetarDerecha",
+                    "type": "PassThrough",
+                    "id": "6d7b9f78-aa42-447c-b2b5-6406b7d92106",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SujetarIzquierda",
+                    "type": "PassThrough",
+                    "id": "4d102d27-c377-4871-a1f7-2ce3ec8dbd1e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -124,6 +142,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "RIzquierda",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "204233c8-35e3-4677-9d13-ca9b1e5de545",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/triggerpressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SujetarDerecha",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e50129c5-936a-4484-b767-dd78bd338d4b",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/triggerpressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SujetarIzquierda",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
