@@ -15,6 +15,9 @@ public class Senalizar : MonoBehaviour
     public LayerMask maskCollider;
     public bool RightpressA;
     public bool RightpressB;
+    public bool rotate = false;
+    public Vector2 LaRotacion;
+    Rotacion CalcularRotacion = new Rotacion();
     public bool EstaSujetandoAlgo
     {
         get { return estaSujetandoAlgo; }
@@ -62,13 +65,22 @@ public class Senalizar : MonoBehaviour
             raycastDistance += Time.deltaTime * 10;
         if (RightpressB)
             raycastDistance -= Time.deltaTime * 10;
+        
     }
     private void UpdateobjetoColliderTransform()
     {
         if (objetoColicionado != null)
         {
             objetoColicionado.transform.localPosition = transform.InverseTransformPoint(endPos);
+            if (rotate == true && estaSujetandoAlgo == true)
+            {
+                Vector3 elvector = new Vector3(LaRotacion.y, LaRotacion.x * -1, 0);
+                elvector = objetoColicionado.transform.localRotation.eulerAngles + elvector.normalized * Time.deltaTime * 100;
+
+                objetoColicionado.transform.localRotation = Quaternion.Euler(elvector);
+            }
         }
+
     }
     #endregion
     #region Event
@@ -79,6 +91,14 @@ public class Senalizar : MonoBehaviour
         RightpressA = (v == 1) ? true : false;
 
     }
+    public void EventRotateObject(InputAction.CallbackContext value)
+    {
+        print("1");
+        LaRotacion = value.ReadValue<Vector2>();
+        print(LaRotacion);
+        rotate = (LaRotacion != Vector2.zero) ? true : false;
+
+    }
     public void EventMoveAlejarObject(InputAction.CallbackContext value)
     {
         float v = value.ReadValue<float>();
@@ -86,14 +106,16 @@ public class Senalizar : MonoBehaviour
         RightpressB = (v == 1) ? true : false;
 
     }
+    /*
     public void EventRotationObject(InputAction.CallbackContext value)
     {
         Vector2 inputMovement = value.ReadValue<Vector2>();
+        print(input)
         transform.position = inputMovement;
     }
+    */
     public void EventSujetar(InputAction.CallbackContext value)
     {
-
         float inputSujetar = value.ReadValue<float>();
         if (inputSujetar == 1)
         {
