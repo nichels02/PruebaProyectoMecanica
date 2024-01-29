@@ -2,7 +2,7 @@
     "name": "New Controls",
     "maps": [
         {
-            "name": "MovimientoYRotacion",
+            "name": "MovimientoYRotacionCamara",
             "id": "9e422f78-6c5a-4b5a-9e7a-1607568852e5",
             "actions": [
                 {
@@ -76,6 +76,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "JoystickDerecha",
+                    "type": "Value",
+                    "id": "b727395d-9288-4f98-8378-dfb0f16845d8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "JoystickIzquierda",
+                    "type": "Value",
+                    "id": "5727dbb3-79d8-496c-9639-550b7729e2e2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "AcercarLazerRightButton_B",
+                    "type": "Value",
+                    "id": "6c8d615d-ac0d-4460-b55b-22a2f60c48e6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "AlejarLazerRightButton_A",
+                    "type": "Value",
+                    "id": "e7a39fef-b405-4667-8cf9-48dc80f6e178",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -85,7 +121,7 @@
                     "path": "<XRController>{RightHand}/devicePosition",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Oculus3",
                     "action": "Derecha",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -96,7 +132,7 @@
                     "path": "<XRController>{LeftHand}/devicePosition",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Oculus3",
                     "action": "Izquierda",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -107,7 +143,7 @@
                     "path": "<OculusHMD>/devicePosition",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Oculus3",
                     "action": "camara",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -118,7 +154,7 @@
                     "path": "<OculusHMD>/{DeviceRotation}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Oculus3",
                     "action": "Rcamara",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -129,7 +165,7 @@
                     "path": "<XRController>{RightHand}/deviceRotation",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Oculus3",
                     "action": "RDerecha",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -140,7 +176,7 @@
                     "path": "<XRController>{LeftHand}/deviceRotation",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Oculus3",
                     "action": "RIzquierda",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -151,7 +187,7 @@
                     "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/triggerpressed",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Oculus3",
                     "action": "SujetarDerecha",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -162,13 +198,162 @@
                     "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/triggerpressed",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Oculus3",
                     "action": "SujetarIzquierda",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "582ab5e2-28d6-4f1e-8f6d-7f25e92568ce",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoystickDerecha",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "359211a8-d77a-4189-b37e-2cff5218d5b7",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/thumbstick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "JoystickDerecha",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "9c4db9c7-477f-4502-aa1b-7573f5a70224",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/thumbstick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "JoystickDerecha",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "ab4d9524-4250-48bd-bf02-71dcfc59a098",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/thumbstick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "JoystickDerecha",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "2632cb66-eb7d-4904-9f54-89ec1a3672cc",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/thumbstick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "JoystickDerecha",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "84edb5c2-cfdb-4a0a-9cdd-216726923f98",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JoystickIzquierda",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "073b7228-f31f-4925-960c-c00ba9d6078c",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/thumbstick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "JoystickIzquierda",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "5d944eee-13f0-48bf-9f13-c1c929a0fc36",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/thumbstick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "JoystickIzquierda",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "f91fe38b-e5f0-4e55-9571-d1e276a70208",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/thumbstick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "JoystickIzquierda",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "cbd8a6a7-565d-4aa0-a171-bee3bc982894",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/thumbstick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "JoystickIzquierda",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "68f82003-ccf6-4678-a52f-3fd60e5034d9",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/secondarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "AcercarLazerRightButton_B",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "03e93e27-21b7-4595-82cf-4df4d9a72370",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/primarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Oculus3",
+                    "action": "AlejarLazerRightButton_A",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
             ]
         }
     ],
-    "controlSchemes": []
+    "controlSchemes": [
+        {
+            "name": "Oculus3",
+            "bindingGroup": "Oculus3",
+            "devices": [
+                {
+                    "devicePath": "<XRHMD>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
 }
