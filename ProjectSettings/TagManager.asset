@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Perno
+  - PiezaHorquilla
+  - PiezaTapaCilindro
+  - PiezaVastago
+  - PiezaEmbolo
+  - PiezaTuboDelCilindro
+  - PiezaTapaAbajo
+  - PiezaHorquillaAbajo
   layers:
   - Default
   - TransparentFX

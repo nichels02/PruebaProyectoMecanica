@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveToCorrectPosition : MonoBehaviour
+public class NoTocar : MonoBehaviour
 {
-    [SerializeField] string tagCodigo;
+    [SerializeField] string tagReferences;
     public bool colisionDetectada = false;
     Rigidbody rb;
     Transform otherPosition;
@@ -15,21 +15,39 @@ public class MoveToCorrectPosition : MonoBehaviour
     }
     private void Start()
     {
+        // Agrega el nuevo tag si no existe
+        if (TagExists(tagReferences))
+        {
+            Debug.Log("Si existe");
+            this.gameObject.tag = tagReferences;
+        }
+        else
+        {
+            Debug.Log("no existe");
+        }
     }
     private void Update()
     {
-        if (colisionDetectada== true)
+        if (colisionDetectada == true)
         {
             MoverHaciaDestino();
         }
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.isKinematic = false;
         }
     }
+    private bool TagExists(string tag)
+    {
+        // Obtén todos los tags en el proyecto
+        string[] allTags = UnityEditorInternal.InternalEditorUtility.tags;
+
+        // Verifica si el tag deseado está en la lista
+        return System.Array.Exists(allTags, element => element == tag);
+    }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == this.gameObject.tag)
+        if (other.tag == this.gameObject.tag)
         {
             colisionDetectada = true;
             rb.isKinematic = true;
