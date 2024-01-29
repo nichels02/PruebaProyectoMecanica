@@ -72,10 +72,10 @@ public class Senalizar : MonoBehaviour
         if (objetoColicionado != null)
         {
             objetoColicionado.transform.localPosition = transform.InverseTransformPoint(endPos);
-            if (rotate == true && estaSujetandoAlgo == true)
+            if (rotate == true)
             {
                 Vector3 elvector = new Vector3(LaRotacion.y, LaRotacion.x * -1, 0);
-                elvector = objetoColicionado.transform.localRotation.eulerAngles + elvector.normalized * Time.deltaTime * 100;
+                elvector = objetoColicionado.transform.localRotation.eulerAngles + elvector * Time.deltaTime * 100;
 
                 objetoColicionado.transform.localRotation = Quaternion.Euler(elvector);
             }
