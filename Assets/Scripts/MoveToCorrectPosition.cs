@@ -33,8 +33,19 @@ public class MoveToCorrectPosition : MonoBehaviour
         {
             colisionDetectada = true;
             rb.isKinematic = true;
-            otherPosition = other.gameObject.transform;
             transform.parent = other.gameObject.transform;
+            otherPosition = other.gameObject.transform;
+            
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<TagsPiezas>().tagCodigo == this.tagCodigo)
+        {
+            colisionDetectada = false;
+            rb.isKinematic = true;
+            transform.parent = null;
+
         }
     }
     void MoverHaciaDestino()
