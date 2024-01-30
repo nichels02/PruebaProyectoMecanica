@@ -136,6 +136,22 @@ public class Senalizar : MonoBehaviour
         }
 
     }
+    public void EventDesarmar(InputAction.CallbackContext value)
+    {
+        float inputSujetar = value.ReadValue<float>();
+        if (inputSujetar == 1)
+        {
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, raycastDistance, maskCollider))
+            {
+                if (hit.collider.gameObject.GetComponent<anclaje>() != null)
+                {
+                    hit.collider.gameObject.GetComponent<anclaje>().DesarmarPieza();
+                }
+            }
+        }
+
+    }
+
     #endregion
     #region Action
     private void tomarObjeto()
@@ -151,7 +167,15 @@ public class Senalizar : MonoBehaviour
                 raycastDistance = hit.distance;
                 endPos = transform.position + transform.forward * raycastDistance;
                 estaSujetandoAlgo = true;
-                objetoColicionado = hit.collider.gameObject;
+                if (hit.collider.gameObject.GetComponent<anclaje>() != null)
+                {
+                    objetoColicionado = hit.collider.gameObject.GetComponent<anclaje>().EstaSiendoSujetado();
+                }
+                else
+                {
+                    objetoColicionado = hit.collider.gameObject;
+                }
+                
                 objetoColicionado.transform.parent = transform;
                 objetoColicionado.transform.localPosition = transform.InverseTransformPoint(endPos);
             }
