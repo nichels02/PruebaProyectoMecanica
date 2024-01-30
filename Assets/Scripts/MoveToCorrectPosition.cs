@@ -29,7 +29,7 @@ public class MoveToCorrectPosition : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == this.gameObject.tag)
+        if(other.GetComponent<TagsPiezas>().tagCodigo == this.tagCodigo)
         {
             colisionDetectada = true;
             rb.isKinematic = true;
