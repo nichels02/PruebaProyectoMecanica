@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class TagsPiezas : MonoBehaviour
 {
-    [SerializeField] string tagCodigo;
+    public string tagCodigo;
 }
