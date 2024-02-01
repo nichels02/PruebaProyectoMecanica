@@ -96,22 +96,22 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "AcercarLazerRightButton_B",
-                    "type": "Value",
-                    "id": "6c8d615d-ac0d-4460-b55b-22a2f60c48e6",
+                    "name": "AlejarYAcercarLazerRightButton_A",
+                    "type": "Button",
+                    "id": "e7a39fef-b405-4667-8cf9-48dc80f6e178",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
-                    "name": "AlejarLazerRightButton_A",
-                    "type": "Value",
-                    "id": "e7a39fef-b405-4667-8cf9-48dc80f6e178",
+                    "name": "desarmar",
+                    "type": "PassThrough",
+                    "id": "dea6410b-9431-4eb6-9d29-a4d7ba665992",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -314,24 +314,46 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "68f82003-ccf6-4678-a52f-3fd60e5034d9",
-                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/secondarybutton",
+                    "name": "1D Axis",
+                    "id": "76cb1cbf-bd94-4756-bb17-d902b954bcd2",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AcercarLazerRightButton_B",
-                    "isComposite": false,
+                    "action": "AlejarYAcercarLazerRightButton_A",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "03e93e27-21b7-4595-82cf-4df4d9a72370",
-                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/primarybutton",
+                    "name": "negative",
+                    "id": "5fc8d2e2-4481-4ed0-9e44-e138be228503",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AlejarLazerRightButton_A",
+                    "action": "AlejarYAcercarLazerRightButton_A",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "ce5979ad-d07f-46eb-9c68-820ce0ac514e",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlejarYAcercarLazerRightButton_A",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "2c8b446f-8667-4e11-8f93-71e9697b4c01",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/grippressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "desarmar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

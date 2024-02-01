@@ -93,9 +93,9 @@ public class Senalizar : MonoBehaviour
     }
     public void EventRotateObject(InputAction.CallbackContext value)
     {
-        print("1");
+        //print("1");
         LaRotacion = value.ReadValue<Vector2>();
-        print(LaRotacion);
+        //print(LaRotacion);
         rotate = (LaRotacion != Vector2.zero) ? true : false;
 
     }

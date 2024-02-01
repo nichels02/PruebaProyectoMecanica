@@ -22,7 +22,7 @@ public class anclaje : MonoBehaviour
 
     public GameObject EstaSiendoSujetado()
     {
-
+        print("llego");
         if (EstaSuelto == false)
         {
             //se lleva el objetoPadre
