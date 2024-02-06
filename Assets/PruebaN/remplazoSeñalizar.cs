@@ -8,6 +8,7 @@ public class remplazoSeñalizar : MonoBehaviour
     [SerializeField] float raycastDistance = 10f;
     LineRenderer lineRenderer;
     GameObject objetoColicionado;
+    GameObject objetoColicionadoPadre;
     bool estaSujetado = false;
     Vector3 PosicionParaRemplazar;
     float acercarOAlejar;
@@ -65,8 +66,8 @@ public class remplazoSeñalizar : MonoBehaviour
                 estaSujetado = true;
                 if (objetoColicionado.GetComponent<anclaje>())
                 {
-                    objetoColicionado = objetoColicionado.GetComponent<anclaje>().EstaSiendoSujetado();
-                    objetoColicionado.transform.parent = transform;
+                    objetoColicionadoPadre = objetoColicionado.GetComponent<anclaje>().EstaSiendoSujetado();
+                    objetoColicionadoPadre.transform.parent = transform;
                     EstanAgarrandoElPadre = true;
                 }
                 else
@@ -79,18 +80,19 @@ public class remplazoSeñalizar : MonoBehaviour
         {
             if (EstanAgarrandoElPadre == true)
             {
+                //print("1");
                 EstanAgarrandoElPadre = false;
-                objetoColicionado.transform.parent = null;
+                objetoColicionadoPadre.transform.parent = null;
+                objetoColicionadoPadre = null;
             }
-            
-            estaSujetado = false;
-            if (objetoColicionado != null)
+            else if (objetoColicionado != null)
             {
                 objetoColicionado.transform.parent = null;
             }
+            estaSujetado = false;
         }
     }
-  
+
     public void EventRotateObject(InputAction.CallbackContext value)
     {
         //print("1");
@@ -99,9 +101,17 @@ public class remplazoSeñalizar : MonoBehaviour
         if (objetoColicionado != null)
         {
             Vector3 elvector = new Vector3(LaRotacion.y, LaRotacion.x * -1, 0);
-            elvector = objetoColicionado.transform.localRotation.eulerAngles + elvector * Time.deltaTime * 100;
-
-            objetoColicionado.transform.localRotation = Quaternion.Euler(elvector);
+            
+            if (EstanAgarrandoElPadre == true)
+            {
+                elvector = objetoColicionadoPadre.transform.localRotation.eulerAngles + elvector * Time.deltaTime * 100;
+                objetoColicionadoPadre.transform.localRotation = Quaternion.Euler(elvector);
+            }
+            else
+            {
+                elvector = objetoColicionado.transform.localRotation.eulerAngles + elvector * Time.deltaTime * 100;
+                objetoColicionado.transform.localRotation = Quaternion.Euler(elvector);
+            }
         }
     }
 
@@ -133,7 +143,7 @@ public class remplazoSeñalizar : MonoBehaviour
                     posicionReal += direction * Time.deltaTime * 50;
                     objetoColicionado.transform.position = posicionReal;
                     raycastDistance -= Time.deltaTime * 25;
-                    print("acercar "+objetoColicionado.name);
+                    print("acercar " + objetoColicionado.name);
                 }
                 else if (acercarOAlejar == -1)
                 {
@@ -144,7 +154,7 @@ public class remplazoSeñalizar : MonoBehaviour
                     posicionReal += direction * Time.deltaTime * 50;
                     objetoColicionado.transform.position = posicionReal;
                     raycastDistance += Time.deltaTime * 50;
-                    print("alejar " +objetoColicionado.name);
+                    print("alejar " + objetoColicionado.name);
                 }
             }
         }
