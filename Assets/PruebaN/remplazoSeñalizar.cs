@@ -12,7 +12,7 @@ public class remplazoSeñalizar : MonoBehaviour
     Vector3 PosicionParaRemplazar;
     float acercarOAlejar;
     bool RegularDistancia;
-
+    bool EstanAgarrandoElPadre = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +32,10 @@ public class remplazoSeñalizar : MonoBehaviour
             // Si hay colisión, ajusta la posición final del LineRenderer
             lineRenderer.SetPosition(0, startPos);
             lineRenderer.SetPosition(1, hit.point);
-            objetoColicionado = hit.collider.gameObject;
+            if (EstanAgarrandoElPadre == false)
+            {
+                objetoColicionado = hit.collider.gameObject;
+            }
             PosicionParaRemplazar = hit.point;
             //print(PosicionParaRemplazar);
         }
@@ -60,11 +63,21 @@ public class remplazoSeñalizar : MonoBehaviour
             if (objetoColicionado != null)
             {
                 estaSujetado = true;
-                objetoColicionado.transform.parent = transform;
+                if (objetoColicionado.GetComponent<anclaje>())
+                {
+                    objetoColicionado = objetoColicionado.GetComponent<anclaje>().EstaSiendoSujetado();
+                    objetoColicionado.transform.parent = transform;
+                    EstanAgarrandoElPadre = true;
+                }
+                else
+                {
+                    objetoColicionado.transform.parent = transform;
+                }
             }
         }
         else
         {
+            EstanAgarrandoElPadre = false;
             estaSujetado = false;
             if (objetoColicionado != null)
             {
@@ -110,19 +123,23 @@ public class remplazoSeñalizar : MonoBehaviour
                 {
                     // Acercar
                     Vector3 direction = (transform.position - PosicionParaRemplazar).normalized;
-                    print(direction);
-                    objetoColicionado.transform.position += direction * Time.deltaTime * 0.1f;
-                    raycastDistance -= Time.deltaTime * 50;
-                    print("acercar");
+                    //print(direction);
+                    Vector3 posicionReal = objetoColicionado.transform.position;
+                    posicionReal += direction * Time.deltaTime * 50;
+                    objetoColicionado.transform.position = posicionReal;
+                    raycastDistance -= Time.deltaTime * 25;
+                    print("acercar "+objetoColicionado.name);
                 }
                 else if (acercarOAlejar == -1)
                 {
                     // Alejar
                     Vector3 direction = (PosicionParaRemplazar - transform.position).normalized;
-                    print(direction);
-                    objetoColicionado.transform.position += direction * Time.deltaTime * 0.1f;
+                    //print(direction);
+                    Vector3 posicionReal = objetoColicionado.transform.position;
+                    posicionReal += direction * Time.deltaTime * 50;
+                    objetoColicionado.transform.position = posicionReal;
                     raycastDistance += Time.deltaTime * 50;
-                    print("alejar");
+                    print("alejar " +objetoColicionado.name);
                 }
             }
         }
