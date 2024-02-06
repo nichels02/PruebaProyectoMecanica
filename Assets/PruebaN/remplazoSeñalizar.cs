@@ -77,7 +77,12 @@ public class remplazoSeñalizar : MonoBehaviour
         }
         else
         {
-            EstanAgarrandoElPadre = false;
+            if (EstanAgarrandoElPadre == true)
+            {
+                EstanAgarrandoElPadre = false;
+                objetoColicionado.transform.parent = null;
+            }
+            
             estaSujetado = false;
             if (objetoColicionado != null)
             {
