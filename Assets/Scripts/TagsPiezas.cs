@@ -30,8 +30,8 @@ public class TagsPiezas : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             other.GetComponent<MoveToCorrectPosition>().xd.enabled = false;
             prueba3 = other.transform;
+            Invoke("MaterialOriginal", 4.5f);
             Destroy(other.gameObject, 5);
-            renderer.material.color = Color.red;
             prueba = true;
         }
         
@@ -39,7 +39,6 @@ public class TagsPiezas : MonoBehaviour
 
     public void MoverHaciaDestino()
     {
-
         if (transform.localPosition.magnitude > 0.1f)
         {
             prueba3.transform.position = Vector3.Lerp(prueba3.transform.position, transform.position, Time.deltaTime * velocidad);
@@ -51,5 +50,11 @@ public class TagsPiezas : MonoBehaviour
             prueba3.transform.localRotation = transform.rotation;
             prueba = false;
         }
+    }
+    public void MaterialOriginal()
+    {
+        Material mat = prueba3.GetChild(0).GetComponent<MeshRenderer>().material;
+        MeshRenderer transformT = transform.GetChild(0).GetComponent<MeshRenderer>();
+        transformT.material=  mat ;
     }
 }

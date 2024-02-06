@@ -15,30 +15,16 @@ public class MoveToCorrectPosition : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         xd = GetComponent<XRGrabInteractable>();
     }
-}
-
-
-
-/*
-private void Update()
-{
-    if (colisionDetectada== true)
+    private void Update()
     {
-        MoverHaciaDestino();
+        if (transform.parent == null)
+        {
+            GameManager2.Instance.BusquedaReferenciaObjeto(this.gameObject);
+        }
+        else
+        {
+           GameManager2.Instance.VolverAColor(this.gameObject);
+        }
     }
 }
-private void OnTriggerEnter(Collider other)
-{
-    if(other.GetComponent<TagsPiezas>().tagCodigo == tagName)
-    {
-        //if(other.transform.parent != null)
-        //{
-        //    transform.parent = null;
-        //}
-        //xd = other.transform;
-        //this.transform.position = xd.transform.localPosition;
-        //this.transform.parent = other.gameObject.transform;
-        //colisionDetectada = true;
-        //rb.isKinematic = true;
-    }
-}*/
+
