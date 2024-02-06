@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 712722574376661371}
   - component: {fileID: 4632318184692728587}
   - component: {fileID: 2609656677278250431}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7305692921936929528}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.318768, y: 0.73168963, z: 0.70534706}
   m_LocalScale: {x: 2.688343, y: 2.688343, z: 2.688343}
   m_ConstrainProportionsScale: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8187593247189755819}
   - component: {fileID: 6222452320152699779}
   - component: {fileID: 4482308383724007272}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "dugatty\xFAr\xFAd:1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5082084220533389702}
   - component: {fileID: 8808013979551545701}
   - component: {fileID: 6099403189077255033}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DIN 7980 - withdrawn 6:3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5481129369475228635}
   - component: {fileID: 8901371717704159071}
   - component: {fileID: 2610989047201427731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,14 +109,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6328952293421393321}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.50000024, y: -0.50000006, z: -0.4999998, w: 0.49999994}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 4.332737, y: 0.6593732, z: 0.7134121}
   m_LocalScale: {x: 2.688343, y: 2.688343, z: 2.688343}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5082084220533389702}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!65 &8901371717704159071
 BoxCollider:
   m_ObjectHideFlags: 0

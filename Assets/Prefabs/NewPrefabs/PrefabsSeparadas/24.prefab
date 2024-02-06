@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7484077028724333855}
   - component: {fileID: 4558237350726082002}
   - component: {fileID: 5362796752723311052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "O gy\u0171r\u0171 nagy 57:1 1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3302306972631960205}
   - component: {fileID: 281681315532141146}
   - component: {fileID: 920209047299034167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,14 +109,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8219422262014980743}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0.000000057601156, z: -0.7071067, w: 0.000000057601167}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 4.318768, y: 0.61770386, z: 0.70534706}
-  m_LocalScale: {x: 2.688342, y: 2.688343, z: 2.688342}
+  m_LocalScale: {x: 2.6883419, y: 2.688343, z: 2.6883419}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7484077028724333855}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 180}
 --- !u!65 &281681315532141146
 BoxCollider:
   m_ObjectHideFlags: 0

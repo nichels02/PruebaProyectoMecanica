@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6911068084961779294}
   - component: {fileID: 1807060210651473521}
   - component: {fileID: 6971418530215381776}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,14 +26,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184705601769590988}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.50000006, y: 0.49999997, z: 0.49999997, w: 0.50000006}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 4.318768, y: 0.84728837, z: 0.70534706}
   m_LocalScale: {x: 2.688343, y: 2.688343, z: 2.688343}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 367933435387558650}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
 --- !u!65 &1807060210651473521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 367933435387558650}
   - component: {fileID: 4787251399469383815}
   - component: {fileID: 8635154513802222381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "csukl\xF3h\xE1z hegesztett:1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

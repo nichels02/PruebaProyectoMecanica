@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6571913648449896236}
   - component: {fileID: 6896208310351560394}
   - component: {fileID: 5859985886240674756}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,14 +26,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4554773840873174203}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5000002, y: 0.5000001, z: 0.49999985, w: 0.49999988}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 4.304799, y: 0.6636745, z: 0.7134121}
   m_LocalScale: {x: 2.688343, y: 2.688343, z: 2.688343}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7794978580630359626}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!65 &6896208310351560394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7794978580630359626}
   - component: {fileID: 7207702026228433794}
   - component: {fileID: 1009828517640248379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DIN 7984 M6 x 20:2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

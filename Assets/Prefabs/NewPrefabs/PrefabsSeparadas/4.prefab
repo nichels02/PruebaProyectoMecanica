@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4715639738798740272}
   - component: {fileID: 7329572588488915837}
   - component: {fileID: 3990758978676083434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 434222_FRI_32_35_1_3_9__0__ring:1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4248278108619333669}
   - component: {fileID: 1102151442029711454}
   - component: {fileID: 4280593867428869616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 4.318768, y: -0.13220942, z: 0.70534706}
-  m_LocalScale: {x: 2.688343, y: 2.688343, z: 2.688343}
+  m_LocalScale: {x: 2.6883428, y: 2.6883428, z: 2.688343}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4715639738798740272}

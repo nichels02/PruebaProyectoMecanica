@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3969297623175725857}
   - component: {fileID: 3868745312608888853}
   - component: {fileID: 6752878443972666294}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DIN 472 47x1,75:1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1315362750972174659}
   - component: {fileID: 3993505388284845829}
   - component: {fileID: 7481492042590244063}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6049113704888755385}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00000008146034, y: -3.0616175e-17, z: 3.402084e-17, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.318768, y: 0.9598404, z: 0.6764474}
   m_LocalScale: {x: 2.688343, y: 2.688343, z: 2.688343}
   m_ConstrainProportionsScale: 0

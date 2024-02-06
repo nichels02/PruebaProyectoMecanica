@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8287082354841872043}
   - component: {fileID: 4322098400691872760}
   - component: {fileID: 8030387523185995036}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DIN 7984 M6 x 20:1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6441492807709784385}
   - component: {fileID: 5451354873709391688}
   - component: {fileID: 8587750664590893679}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,14 +109,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7491117454546723406}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5000002, y: 0.5000001, z: 0.49999985, w: 0.49999988}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 4.318768, y: 0.6636745, z: 0.68921703}
   m_LocalScale: {x: 2.688343, y: 2.688343, z: 2.688343}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8287082354841872043}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!65 &5451354873709391688
 BoxCollider:
   m_ObjectHideFlags: 0

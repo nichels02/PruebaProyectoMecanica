@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8194394781181936195}
   - component: {fileID: 7804454462656165527}
   - component: {fileID: 6587473713606873412}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "t\xE1maszt\xF3gy\u0171r\u0171 kicsi:2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 6176010263714616200}
   - component: {fileID: 4421334804020885857}
   - component: {fileID: 4878656042996797503}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,14 +109,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7153674701438964460}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000057601167, y: 0.7071067, z: -0.000000057601156, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.318768, y: 0.73168963, z: 0.70534706}
-  m_LocalScale: {x: 2.688342, y: 2.688343, z: 2.688342}
+  m_LocalScale: {x: 2.6883419, y: 2.688343, z: 2.6883419}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8194394781181936195}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &4421334804020885857
 BoxCollider:
   m_ObjectHideFlags: 0

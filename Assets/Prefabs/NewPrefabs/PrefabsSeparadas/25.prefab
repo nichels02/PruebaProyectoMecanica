@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 481946982990786285}
   - component: {fileID: 3126561643549050742}
   - component: {fileID: 7164314581190562657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,14 +26,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5211892037446435606}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000057601167, y: 0.7071067, z: -0.000000057601156, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.318768, y: 0.73168963, z: 0.70534706}
-  m_LocalScale: {x: 2.688342, y: 2.688343, z: 2.688342}
+  m_LocalScale: {x: 2.6883419, y: 2.688343, z: 2.6883419}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4720873156322177685}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &3126561643549050742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4720873156322177685}
   - component: {fileID: 1138724241372076304}
   - component: {fileID: 5624434209827705939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Ogy\u0171r\u0171 kicsi:1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

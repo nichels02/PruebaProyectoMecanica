@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2843447436151270460}
   - component: {fileID: 3605840923323702571}
   - component: {fileID: 2276777795330234836}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Fed\xE9l z\xE1rt:1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2814909662073793312}
   - component: {fileID: 6970452666381473878}
   - component: {fileID: 8966641714403224999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,14 +109,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7939730715430278608}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000057601167, y: 0.7071067, z: -0.000000057601156, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.318768, y: 0.73168963, z: 0.70534706}
-  m_LocalScale: {x: 2.688342, y: 2.688343, z: 2.688342}
+  m_LocalScale: {x: 2.6883419, y: 2.688343, z: 2.6883419}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2843447436151270460}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &6970452666381473878
 BoxCollider:
   m_ObjectHideFlags: 0
