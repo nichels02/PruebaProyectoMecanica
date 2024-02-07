@@ -19,12 +19,12 @@ public class MovimientoPreciso : MonoBehaviour
         // Agrega el nuevo tag si no existe
         if (TagExists(tagReferences))
         {
-            Debug.Log("Si existe");
+            //Debug.Log("Si existe");
             this.gameObject.tag = tagReferences;
         }
         else
         {
-            Debug.Log("no existe");
+            //Debug.Log("no existe");
         }
     }
     private void Update()

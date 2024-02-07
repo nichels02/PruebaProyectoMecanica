@@ -69,6 +69,7 @@ public class remplazoSeñalizar : MonoBehaviour
                     objetoColicionadoPadre = objetoColicionado.GetComponent<anclaje>().EstaSiendoSujetado();
                     objetoColicionadoPadre.transform.parent = transform;
                     EstanAgarrandoElPadre = true;
+                    //print(EstanAgarrandoElPadre);
                 }
                 else
                 {
@@ -80,13 +81,15 @@ public class remplazoSeñalizar : MonoBehaviour
         {
             if (EstanAgarrandoElPadre == true)
             {
-                //print("1");
+                //print("soltar padre");
                 EstanAgarrandoElPadre = false;
                 objetoColicionadoPadre.transform.parent = null;
                 objetoColicionadoPadre = null;
             }
-            else if (objetoColicionado != null)
+            else if (objetoColicionado != null )
             {
+                print(EstanAgarrandoElPadre);
+                //print("soltar objeto");
                 objetoColicionado.transform.parent = null;
             }
             estaSujetado = false;
@@ -136,25 +139,28 @@ public class remplazoSeñalizar : MonoBehaviour
             {
                 if (acercarOAlejar == 1)
                 {
-                    // Acercar
-                    Vector3 direction = (transform.position - PosicionParaRemplazar).normalized;
-                    //print(direction);
-                    Vector3 posicionReal = objetoColicionado.transform.position;
-                    posicionReal += direction * Time.deltaTime * 50;
-                    objetoColicionado.transform.position = posicionReal;
-                    raycastDistance -= Time.deltaTime * 25;
-                    print("acercar " + objetoColicionado.name);
+                    if (EstanAgarrandoElPadre == true)
+                    {
+                        print("1");
+                        Acercar(objetoColicionadoPadre);
+                    }
+                    else
+                    {
+                        Acercar(objetoColicionado);
+                    }
+                    
                 }
                 else if (acercarOAlejar == -1)
                 {
-                    // Alejar
-                    Vector3 direction = (PosicionParaRemplazar - transform.position).normalized;
-                    //print(direction);
-                    Vector3 posicionReal = objetoColicionado.transform.position;
-                    posicionReal += direction * Time.deltaTime * 50;
-                    objetoColicionado.transform.position = posicionReal;
-                    raycastDistance += Time.deltaTime * 50;
-                    print("alejar " + objetoColicionado.name);
+                    if (EstanAgarrandoElPadre == true)
+                    {
+                        Alejar(objetoColicionadoPadre);
+                    }
+                    else
+                    {
+                        Alejar(objetoColicionado);
+                    }
+                    
                 }
             }
         }
@@ -169,6 +175,32 @@ public class remplazoSeñalizar : MonoBehaviour
                 raycastDistance += Time.deltaTime * 10;
             }
         }
+    }
+
+
+    void Acercar(GameObject objeto)
+    {
+        print(objeto.name);
+        // Acercar
+        Vector3 direction = (transform.position - PosicionParaRemplazar).normalized;
+        //print(direction);
+        Vector3 posicionReal = objeto.transform.position;
+        posicionReal += direction * Time.deltaTime * 50;
+        objeto.transform.position = posicionReal;
+        raycastDistance -= Time.deltaTime * 25;
+        print("acercar " + objeto.name);
+    }
+
+    void Alejar(GameObject objeto)
+    {
+        // Alejar
+        Vector3 direction = (PosicionParaRemplazar - transform.position).normalized;
+        //print(direction);
+        Vector3 posicionReal = objeto.transform.position;
+        posicionReal += direction * Time.deltaTime * 50;
+        objeto.transform.position = posicionReal;
+        raycastDistance += Time.deltaTime * 50;
+        print("alejar " + objeto.name);
     }
 
 }
