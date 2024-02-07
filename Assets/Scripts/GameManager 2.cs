@@ -40,10 +40,35 @@ public class GameManager2 : MonoBehaviour
         {
             if(listaPiezas[i].tagCodigo == nombre.GetComponent<MoveToCorrectPosition>().tagName)
             {
-                Transform hijoObjeto = listaPiezas[i].transform.GetChild(0);
-                Renderer renderer1 = hijoObjeto.GetComponent<Renderer>();
-                renderer1.material.color = Color.black;
+                if (i >= 0 && i <= 2)
+                {
+                    Grupo1();
+                }
+                else if (i >= 3 && i <= 10)
+                {
+                    Grupo2();
+                }
+                else if(i >=11 && i <= 22)
+                {
+                    Grupo3();
+                }
+                else if(i >= 23 && i <= 28)
+                {
+                    Grupo4();
+                }
+                else if(i == 29)
+                {
+                    Grupo5();
+                }
+                else if(i == 30)
+                {
+                    Grupo6();
+                }
                 ii = i;
+                //Transform hijoObjeto = listaPiezas[i].transform.GetChild(0);
+                //Renderer renderer1 = hijoObjeto.GetComponent<Renderer>();
+                //renderer1.material.color = Color.black;
+
             }
         }
     }
@@ -54,6 +79,46 @@ public class GameManager2 : MonoBehaviour
 
             listaPiezas[ii].transform.GetChild(0).GetComponent<Renderer>().material.color = colorBase;
         }
+    }
+
+    public void Grupo1() {
+        bool a1 = false;
+        if(ii == 2)
+        {
+            PintarPieza();
+            a1 = true;
+        }
+        if (a1)
+        {
+            PintarPieza();
+        }
+        
+    }
+    public void Grupo2()
+    {
+
+    }
+    public void Grupo3()
+    {
+
+    }
+    public void Grupo4()
+    {
+
+    }
+    public void Grupo5()
+    {
+
+    }
+    public void Grupo6()
+    {
+
+    }
+    public void PintarPieza()
+    {
+        Transform hijoObjeto = listaPiezas[ii].transform.GetChild(0);
+        Renderer renderer1 = hijoObjeto.GetComponent<Renderer>();
+        renderer1.material.color = Color.black;
     }
 
 }
