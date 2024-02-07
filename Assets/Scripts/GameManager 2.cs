@@ -57,3 +57,31 @@ public class GameManager2 : MonoBehaviour
     }
 
 }
+
+/////Grupos
+/* grupo 1 
+ * 0,1,2 -- orden 2-(1-0)
+ * grupo 2
+  
+                   4 -5 - 3 -(6-7)
+ * 3--10 -- orden -   
+                   8 - 10 - 9
+ * grupo 3
+                              12 - 15
+                         22 - 13 -16
+                              14 -17
+ * 11--22 -- orden 18-11-
+                         (21-20)-19
+ 
+
+ * grupo 4
+ 
+                         23-24
+ * 23--28 -- orden 26-25-
+                         29-28
+
+ * grupo 5
+ * 29 -- orden 29
+ * grupo 6
+ * 30 -- orden 30
+ */
