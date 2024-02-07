@@ -26,6 +26,7 @@ public class anclaje : MonoBehaviour
         if (EstaSuelto == false)
         {
             //se lleva el objetoPadre
+            objetoPadre.GetComponent<ObjetoPadre>().ReubicarPadre(transform.position);
             return objetoPadre;
         }
         else

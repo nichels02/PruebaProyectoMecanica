@@ -103,15 +103,16 @@ public class remplazoSeñalizar : MonoBehaviour
         //print(LaRotacion);
         if (objetoColicionado != null)
         {
-            Vector3 elvector = new Vector3(LaRotacion.y, LaRotacion.x * -1, 0);
-            
             if (EstanAgarrandoElPadre == true)
             {
-                elvector = objetoColicionadoPadre.transform.localRotation.eulerAngles + elvector * Time.deltaTime * 100;
-                objetoColicionadoPadre.transform.localRotation = Quaternion.Euler(elvector);
+                Vector3 elvector = new Vector3(0, LaRotacion.x * -1, LaRotacion.y);
+                //print("1");
+                elvector = objetoColicionadoPadre.transform.rotation.eulerAngles + elvector * Time.deltaTime * 100;
+                objetoColicionadoPadre.transform.rotation = Quaternion.Euler(elvector);
             }
             else
             {
+                Vector3 elvector = new Vector3(LaRotacion.y, LaRotacion.x * -1, 0);
                 elvector = objetoColicionado.transform.localRotation.eulerAngles + elvector * Time.deltaTime * 100;
                 objetoColicionado.transform.localRotation = Quaternion.Euler(elvector);
             }
@@ -121,14 +122,7 @@ public class remplazoSeñalizar : MonoBehaviour
     public void EventMoveAcercarObject(InputAction.CallbackContext value)
     {
         acercarOAlejar = value.ReadValue<float>();
-        if (acercarOAlejar != 0f)
-        {
-            RegularDistancia = true;
-        }
-        else
-        {
-            RegularDistancia = false;
-        }
+        RegularDistancia = (acercarOAlejar != 0 ? true : false);
     }
 
     public void UpdateAcercaryAlejar()
