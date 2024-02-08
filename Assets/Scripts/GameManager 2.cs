@@ -40,6 +40,7 @@ public class GameManager2 : MonoBehaviour
         {
             if(listaPiezas[i].tagCodigo == nombre.GetComponent<MoveToCorrectPosition>().tagName)
             {
+                ii = i;
                 if (i >= 0 && i <= 2)
                 {
                     Grupo1();
@@ -64,7 +65,7 @@ public class GameManager2 : MonoBehaviour
                 {
                     Grupo6();
                 }
-                ii = i;
+                
                 //Transform hijoObjeto = listaPiezas[i].transform.GetChild(0);
                 //Renderer renderer1 = hijoObjeto.GetComponent<Renderer>();
                 //renderer1.material.color = Color.black;
@@ -82,45 +83,142 @@ public class GameManager2 : MonoBehaviour
     }
 
     public void Grupo1() {
-        bool a1 = false;
         if (ii == 2)
         {
             PintarPieza();
-            if (listaPiezas[ii].prueba)
-            {
-                a1 = true;
-            }
         }
-        else if(ii != 2 && a1 == false)
-        {
-            ii = int.MinValue;
-        }
-        if (a1 == true)
+        else if (ii != 2 && listaPiezas[2].prueba) 
         {
             PintarPieza();
         }
-        
-        
     }
     public void Grupo2()
     {
-
+        if (ii == 4 || ii==8)
+        {
+            PintarPieza();
+        }
+        else if (ii == 5 && listaPiezas[4].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 3 && listaPiezas[5].prueba)
+        {
+            PintarPieza();
+        }
+        else if ((ii == 6 || ii == 7) && listaPiezas[3].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 10 && listaPiezas[8].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 9 && listaPiezas[10].prueba)
+        {
+            PintarPieza();
+        }
+        /*
+          * grupo 2
+  
+                                4 -5 - 3 -(6-7)
+            * 3--10 -- orden -   
+                                8 - 10 - 9
+         */
     }
     public void Grupo3()
     {
+        if (ii == 18)
+        {
+            PintarPieza();
+        }
+        else if (ii == 11 && listaPiezas[18].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 22 && listaPiezas[11].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 12 && listaPiezas[22].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 15 && listaPiezas[12].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 13 && listaPiezas[22].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 16 && listaPiezas[13].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 14 && listaPiezas[22].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 17 && listaPiezas[14].prueba)
+        {
+            PintarPieza();
+        }
+        else if ((ii == 21|| ii == 20) && listaPiezas[11].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 19 && (listaPiezas[20].prueba && listaPiezas[21].prueba))
+        {
+            PintarPieza();
+        }
+        /** grupo 3
+                              12 - 15
+                         22 - 13 -16
+                              14 -17
+ * 11--22 -- orden 18-11-
+                         (21-20)-19*/
 
     }
     public void Grupo4()
     {
+        if (ii == 26)
+        {
+            PintarPieza();
+        }
+        else if (ii ==25 && listaPiezas[26].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 28  && listaPiezas[26].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 27  && listaPiezas[28].prueba)
+        {
+            PintarPieza();
+        }
+        else if (ii == 23  && listaPiezas[25].prueba)
+        {
+            PintarPieza();
+        }else if (ii == 24 && listaPiezas[23].prueba)
+        {
+            PintarPieza();
+        }
 
+        /* * grupo 4
+ 
+                         23-24
+ * 23--28 -- orden 25-26
+                         27-28*/
     }
     public void Grupo5()
     {
-
+        PintarPieza();
     }
     public void Grupo6()
     {
-
+        PintarPieza();
     }
     public void PintarPieza()
     {

@@ -26,13 +26,14 @@ public class TagsPiezas : MonoBehaviour
     {
         if (other.GetComponent<MoveToCorrectPosition>().tagName == tagCodigo)
         {
+            prueba = true;
             other.gameObject.GetComponent<Rigidbody>().useGravity = false;
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             other.GetComponent<MoveToCorrectPosition>().xd.enabled = false;
             prueba3 = other.transform;
-            Invoke("MaterialOriginal", 4.5f);
-            Destroy(other.gameObject, 5);
-            prueba = true;
+            Invoke("MaterialOriginal", 3f);
+            Destroy(other.gameObject, 3.2f);
+            
         }
     }
 
