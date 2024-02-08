@@ -12,6 +12,7 @@ TagManager:
   - PiezaTuboDelCilindro
   - PiezaTapaAbajo
   - PiezaHorquillaAbajo
+  - objeto
   layers:
   - Default
   - TransparentFX
