@@ -59,6 +59,45 @@ public class remplazoSeñalizar : MonoBehaviour
     public void Sujetar(InputAction.CallbackContext value)
     {
         float inputSujetar = value.ReadValue<float>();
+
+        if(inputSujetar == 1&& objetoColicionado != null&& objetoColicionado.tag=="objeto")
+        {
+            estaSujetado = true;
+            if (objetoColicionado.GetComponent<anclaje>())
+            {
+                objetoColicionadoPadre = objetoColicionado.GetComponent<anclaje>().EstaSiendoSujetado();
+                objetoColicionadoPadre.transform.parent = transform;
+                EstanAgarrandoElPadre = true;
+                //print(EstanAgarrandoElPadre);
+            }
+            else
+            {
+                objetoColicionado.transform.parent = transform;
+            }
+        }
+        else if(inputSujetar == 0 && estaSujetado == true)
+        {
+            if (EstanAgarrandoElPadre == true)
+            {
+                //print("soltar padre");
+                EstanAgarrandoElPadre = false;
+                objetoColicionadoPadre.transform.parent = null;
+                objetoColicionadoPadre = null;
+            }
+            else if (objetoColicionado != null)
+            {
+                print(EstanAgarrandoElPadre);
+                //print("soltar objeto");
+                objetoColicionado.transform.parent = null;
+            }
+            estaSujetado = false;
+        }
+
+
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
         if (inputSujetar == 1)
         {
             if (objetoColicionado != null)
