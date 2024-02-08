@@ -34,7 +34,6 @@ public class TagsPiezas : MonoBehaviour
             Destroy(other.gameObject, 5);
             prueba = true;
         }
-        
     }
 
     public void MoverHaciaDestino()
@@ -48,7 +47,6 @@ public class TagsPiezas : MonoBehaviour
         {
             prueba3.transform.localPosition = transform.position;
             prueba3.transform.localRotation = transform.rotation;
-            prueba = false;
         }
     }
     public void MaterialOriginal()

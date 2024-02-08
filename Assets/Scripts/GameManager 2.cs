@@ -83,10 +83,13 @@ public class GameManager2 : MonoBehaviour
 
     public void Grupo1() {
         bool a1 = false;
-        if(ii == 2)
+        if (ii == 2)
         {
             PintarPieza();
-            a1 = true;
+            if (listaPiezas[ii].prueba)
+            {
+                a1 = true;
+            }
         }
         if (a1)
         {
