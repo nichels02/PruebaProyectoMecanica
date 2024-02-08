@@ -60,7 +60,7 @@ public class remplazoSeñalizar : MonoBehaviour
     {
         float inputSujetar = value.ReadValue<float>();
 
-        if(inputSujetar == 1&& objetoColicionado != null&& objetoColicionado.tag=="objeto")
+        if(inputSujetar == 1 &&   objetoColicionado != null   && objetoColicionado.tag=="objeto" && !estaSujetado)
         {
             estaSujetado = true;
             if (objetoColicionado.GetComponent<anclaje>())
@@ -85,47 +85,6 @@ public class remplazoSeñalizar : MonoBehaviour
                 objetoColicionadoPadre = null;
             }
             else if (objetoColicionado != null)
-            {
-                print(EstanAgarrandoElPadre);
-                //print("soltar objeto");
-                objetoColicionado.transform.parent = null;
-            }
-            estaSujetado = false;
-        }
-
-
-
-
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////
-        if (inputSujetar == 1)
-        {
-            if (objetoColicionado != null)
-            {
-                estaSujetado = true;
-                if (objetoColicionado.GetComponent<anclaje>())
-                {
-                    objetoColicionadoPadre = objetoColicionado.GetComponent<anclaje>().EstaSiendoSujetado();
-                    objetoColicionadoPadre.transform.parent = transform;
-                    EstanAgarrandoElPadre = true;
-                    //print(EstanAgarrandoElPadre);
-                }
-                else
-                {
-                    objetoColicionado.transform.parent = transform;
-                }
-            }
-        }
-        else
-        {
-            if (EstanAgarrandoElPadre == true)
-            {
-                //print("soltar padre");
-                EstanAgarrandoElPadre = false;
-                objetoColicionadoPadre.transform.parent = null;
-                objetoColicionadoPadre = null;
-            }
-            else if (objetoColicionado != null )
             {
                 print(EstanAgarrandoElPadre);
                 //print("soltar objeto");
@@ -166,35 +125,27 @@ public class remplazoSeñalizar : MonoBehaviour
 
     public void UpdateAcercaryAlejar()
     {
-        if (objetoColicionado != null)
+        if(objetoColicionado != null && estaSujetado == true && acercarOAlejar == 1)
         {
-            if (estaSujetado == true)
+            if (EstanAgarrandoElPadre == true)
             {
-                if (acercarOAlejar == 1)
-                {
-                    if (EstanAgarrandoElPadre == true)
-                    {
-                        print("1");
-                        Acercar(objetoColicionadoPadre);
-                    }
-                    else
-                    {
-                        Acercar(objetoColicionado);
-                    }
-                    
-                }
-                else if (acercarOAlejar == -1)
-                {
-                    if (EstanAgarrandoElPadre == true)
-                    {
-                        Alejar(objetoColicionadoPadre);
-                    }
-                    else
-                    {
-                        Alejar(objetoColicionado);
-                    }
-                    
-                }
+                print("1");
+                Acercar(objetoColicionadoPadre);
+            }
+            else
+            {
+                Acercar(objetoColicionado);
+            }
+        }
+        else if(objetoColicionado != null && estaSujetado == true && acercarOAlejar == -1)
+        {
+            if (EstanAgarrandoElPadre == true)
+            {
+                Alejar(objetoColicionadoPadre);
+            }
+            else
+            {
+                Alejar(objetoColicionado);
             }
         }
         else
@@ -214,14 +165,18 @@ public class remplazoSeñalizar : MonoBehaviour
     void Acercar(GameObject objeto)
     {
         print(objeto.name);
-        // Acercar
-        Vector3 direction = (transform.position - PosicionParaRemplazar).normalized;
-        //print(direction);
-        Vector3 posicionReal = objeto.transform.position;
-        posicionReal += direction * Time.deltaTime * 50;
-        objeto.transform.position = posicionReal;
-        raycastDistance -= Time.deltaTime * 25;
-        print("acercar " + objeto.name);
+        float distancia = Vector3.Distance(objeto.transform.position, transform.position);
+        if (distancia > 2)
+        {
+            // Acercar
+            Vector3 direction = (transform.position - PosicionParaRemplazar).normalized;
+            //print(direction);
+            Vector3 posicionReal = objeto.transform.position;
+            posicionReal += direction * Time.deltaTime * 50;
+            objeto.transform.position = posicionReal;
+            raycastDistance -= Time.deltaTime * 25;
+            print("acercar " + objeto.name);
+        }
     }
 
     void Alejar(GameObject objeto)

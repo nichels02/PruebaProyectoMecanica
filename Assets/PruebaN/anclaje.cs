@@ -7,6 +7,7 @@ public class anclaje : MonoBehaviour
 {
     [SerializeField] List<anclaje> padres = new List<anclaje>();
     [SerializeField] GameObject objetoPadre;
+    [SerializeField] GameObject hermano;
     bool estaDesarmado = false;
     bool EstaSuelto = false;
 
