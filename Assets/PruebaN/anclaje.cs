@@ -10,13 +10,14 @@ public class anclaje : MonoBehaviour
     [SerializeField] GameObject hermano;
     bool estaDesarmado = false;
     bool EstaSuelto = false;
+    
 
 
     private void Start()
     {
         if (padres.Count == 0)
         {
-            EstaSuelto = true;
+            estaDesarmado = true;
         }
     }
 
@@ -42,7 +43,11 @@ public class anclaje : MonoBehaviour
 
     public void DesarmarPieza()
     {
-        if (EstaSuelto == false)
+        if (EstaSuelto)
+        {
+            SiSeDesarmara();
+        }
+        else
         {
             bool tmp = false;
             for (int i = 0; i < padres.Count; i++)
@@ -56,11 +61,19 @@ public class anclaje : MonoBehaviour
             if (tmp == false)
             {
                 EstaSuelto = true;
-                //se desarma
+                SiSeDesarmara();
+            }
+            else
+            {
+                //suena Sonido de fallido
             }
         }
-        
+    }
 
+
+    void SiSeDesarmara()
+    {
+        
     }
 
 

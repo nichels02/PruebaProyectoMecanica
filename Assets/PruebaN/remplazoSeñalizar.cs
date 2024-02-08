@@ -123,6 +123,16 @@ public class remplazoSeñalizar : MonoBehaviour
         RegularDistancia = (acercarOAlejar != 0 ? true : false);
     }
 
+    public void EventDesarmar(InputAction.CallbackContext value)
+    {
+        float inputDesarmar = value.ReadValue<float>();
+        if (objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<anclaje>()) 
+        {
+            objetoColicionado.GetComponent<anclaje>().DesarmarPieza();
+        }
+    }
+
+
     public void UpdateAcercaryAlejar()
     {
         if(objetoColicionado != null && estaSujetado == true && acercarOAlejar == 1)
@@ -190,5 +200,8 @@ public class remplazoSeñalizar : MonoBehaviour
         raycastDistance += Time.deltaTime * 50;
         print("alejar " + objeto.name);
     }
+
+
+
 
 }
