@@ -91,11 +91,15 @@ public class GameManager2 : MonoBehaviour
                 a1 = true;
             }
         }
+        else if(ii != 2 && a1 == false)
+        {
+            ii = int.MinValue;
+        }
         if (a1 == true)
         {
             PintarPieza();
         }
-        ii = int.MinValue;
+        
         
     }
     public void Grupo2()
