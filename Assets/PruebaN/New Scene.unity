@@ -156,7 +156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f213479fe8622b46baa03ae9f485048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ElVectorRotacion: {x: 1000, y: 0, z: 0}
+  LaRotacion: {fileID: 424126525}
+  ElVectorRotacion: {x: 0.5, y: 0, z: 0}
+  vueltas: 5
   debeRotar: 0
 --- !u!54 &95947344
 Rigidbody:
