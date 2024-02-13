@@ -437,6 +437,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagCodigo: 
+  velocidad: 5
+  prueba: 0
 --- !u!1 &2339622052183950152
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,6 +590,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagCodigo: 
+  velocidad: 5
+  prueba: 0
 --- !u!1 &4601235817846636933
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +660,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagCodigo: 
+  velocidad: 5
+  prueba: 0
 --- !u!1 &5614717854042013036
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagCodigo: 
+  velocidad: 5
+  prueba: 0
 --- !u!1 &7853174489528115898
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +883,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagCodigo: 
+  velocidad: 5
+  prueba: 0
 --- !u!1 &9100337659041296588
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,3 +953,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagCodigo: 
+  velocidad: 5
+  prueba: 0
