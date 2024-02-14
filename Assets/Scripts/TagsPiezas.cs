@@ -31,6 +31,8 @@ public class TagsPiezas : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             other.GetComponent<MoveToCorrectPosition>().xd.enabled = false;
             prueba3 = other.transform;
+            print(other.transform.position);
+            print(transform.position);
             Invoke("MaterialOriginal", 3f);
             Destroy(other.gameObject, 3.2f);
             
