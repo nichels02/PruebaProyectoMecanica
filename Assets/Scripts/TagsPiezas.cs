@@ -35,21 +35,20 @@ public class TagsPiezas : MonoBehaviour
             print(transform.position);
             Invoke("MaterialOriginal", 3f);
             Destroy(other.gameObject, 3.2f);
-            
         }
     }
 
     public void MoverHaciaDestino()
     {
-        if (transform.localPosition.magnitude > 0.1f)
+        if (transform.localPosition.magnitude > 0.2f)
         {
             prueba3.transform.position = Vector3.Lerp(prueba3.transform.position, transform.position, Time.deltaTime * velocidad);
             prueba3.transform.rotation = Quaternion.Lerp(prueba3.transform.rotation, transform.rotation, Time.deltaTime * velocidad);
         }
         else
         {
-            prueba3.transform.localPosition = transform.position;
-            prueba3.transform.localRotation = transform.rotation;
+            prueba3.transform.position= transform.position;
+            prueba3.transform.rotation = transform.rotation;
         }
     }
     public void MaterialOriginal()
