@@ -7,9 +7,11 @@ public class GameManager2 : MonoBehaviour
     // Instancia estática del GameManager2
     private static GameManager2 instance;
 
-    // Lista de piezas
+    // Lista de piezas separadas
     [SerializeField] List<TagsPiezas> listaPiezas;
     [SerializeField] Color colorBase;
+    // Lista de piezas semiArmadas
+    [SerializeField] List<TagsPiezas> listaPiezasSemiArmadas;
     int ii;
     // Propiedad para acceder a la instancia del GameManager2
     public static GameManager2 Instance
@@ -226,7 +228,6 @@ public class GameManager2 : MonoBehaviour
         Renderer renderer1 = hijoObjeto.GetComponent<Renderer>();
         renderer1.material.color = Color.black;
     }
-
 }
 
 /////Grupos
