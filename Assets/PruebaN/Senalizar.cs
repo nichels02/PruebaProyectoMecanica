@@ -143,7 +143,7 @@ public class Senalizar : MonoBehaviour
         {
             if(objetoColicionado!=null && !estaSujetandoAlgo && objetoColicionado.GetComponent<anclaje>())
             {
-
+                objetoColicionado.GetComponent<anclaje>().DesarmarPieza();
             }
 
             /*
