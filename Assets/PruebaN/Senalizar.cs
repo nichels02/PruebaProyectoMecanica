@@ -141,6 +141,12 @@ public class Senalizar : MonoBehaviour
         float inputSujetar = value.ReadValue<float>();
         if (inputSujetar == 1)
         {
+            if(objetoColicionado!=null && !estaSujetandoAlgo && objetoColicionado.GetComponent<anclaje>())
+            {
+
+            }
+
+            /*
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, raycastDistance, maskCollider))
             {
                 if (hit.collider.gameObject.GetComponent<anclaje>() != null)
@@ -148,6 +154,7 @@ public class Senalizar : MonoBehaviour
                     hit.collider.gameObject.GetComponent<anclaje>().DesarmarPieza();
                 }
             }
+            */
         }
 
     }
