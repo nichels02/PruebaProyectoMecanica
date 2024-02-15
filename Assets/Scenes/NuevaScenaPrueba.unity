@@ -2177,37 +2177,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listaPiezas:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 5853905864102337672}
+  - {fileID: 7694869023061242390}
+  - {fileID: 3605475682003959069}
+  - {fileID: 6433756940199245070}
+  - {fileID: 8774350551504252346}
+  - {fileID: 7337950736909403507}
+  - {fileID: 7846788839699715962}
+  - {fileID: 8595054197979408335}
+  - {fileID: 3861816478051737897}
+  - {fileID: 4750860268785623164}
+  - {fileID: 8952494373806211784}
+  - {fileID: 9095600971804288589}
+  - {fileID: 2665992585967017390}
+  - {fileID: 6631090852557438467}
+  - {fileID: 7250150255276288143}
+  - {fileID: 7819165990796034300}
+  - {fileID: 7544565543692561294}
+  - {fileID: 8273122627071465831}
+  - {fileID: 7357842303233342535}
+  - {fileID: 8883536604808798299}
+  - {fileID: 9210515996897800675}
+  - {fileID: 3024247172036462628}
+  - {fileID: 5451772513800385122}
+  - {fileID: 6167054356047103416}
+  - {fileID: 7574129648538616463}
+  - {fileID: 5894199240968751628}
+  - {fileID: 6777426271237876397}
+  - {fileID: 8586206739877310744}
+  - {fileID: 6937928121179783327}
+  - {fileID: 8443256062778564700}
+  - {fileID: 9136762627714970190}
   colorBase: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &721382273
 Transform:
