@@ -105,9 +105,27 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "desarmar",
+                    "name": "AlejarYAcercarLazerLeftButton_A",
+                    "type": "Button",
+                    "id": "6240e372-965b-410b-9f49-b1b68e633b93",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "desarmarD",
                     "type": "PassThrough",
                     "id": "dea6410b-9431-4eb6-9d29-a4d7ba665992",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "desarmarI",
+                    "type": "PassThrough",
+                    "id": "0c6ed284-d2b2-4a79-9c25-7b2b671ce2f4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -353,7 +371,51 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "desarmar",
+                    "action": "desarmarD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "fdd30fa4-6743-4352-9aeb-7029e3cf39e6",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlejarYAcercarLazerLeftButton_A",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "cc70eab0-4e09-41b2-bac9-f19d0620caaf",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/secondarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlejarYAcercarLazerLeftButton_A",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "1bb51524-96a8-41dc-a3df-2650d80ea15d",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/primarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlejarYAcercarLazerLeftButton_A",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "bf86d49d-5a91-49ac-a517-5eac29156f41",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/grippressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "desarmarI",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

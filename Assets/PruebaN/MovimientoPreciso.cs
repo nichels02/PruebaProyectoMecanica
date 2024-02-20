@@ -9,11 +9,16 @@ public class MovimientoPreciso : MonoBehaviour
     [SerializeField] int velocidad = 100;
     [SerializeField] int velocidadDeMovimiento = 100;
     [SerializeField] Vector3 ElVectorRotacion;
+    [SerializeField] Vector3 escalaInicial;
+    Vector3 escalaFinal;
     [SerializeField] int vueltas;
     Vector3 ElVectorRotacionComprobacion = new Vector3(1, 1, 1);
     Vector3 ElVectorFinal;
     [SerializeField] bool debeRotar;
     bool debeRotar2;
+    bool debeRotar2_1;
+    bool debeRotar2_2;
+    bool debeRotar3;
 
 
     [SerializeField] GameObject puntoFinal;
@@ -35,11 +40,11 @@ public class MovimientoPreciso : MonoBehaviour
 
     private void Start()
     {
-        ElVectorRotacionComprobacion.x = ElVectorRotacion.x != 0 ? ElVectorRotacionComprobacion.x = 360 / ElVectorRotacion.x * vueltas * ElVectorRotacion.x : 0;
-        ElVectorRotacionComprobacion.y = ElVectorRotacion.y != 0 ? ElVectorRotacionComprobacion.y = 360 / ElVectorRotacion.y * vueltas * ElVectorRotacion.y : 0;
-        ElVectorRotacionComprobacion.z = ElVectorRotacion.z != 0 ? ElVectorRotacionComprobacion.z = 360 / ElVectorRotacion.z * vueltas * ElVectorRotacion.z : 0;
+        ElVectorRotacionComprobacion.x = ElVectorRotacion.x != 0 ?   ElVectorRotacionComprobacion.x = 360 / ElVectorRotacion.x * vueltas * ElVectorRotacion.x : 0;
+        ElVectorRotacionComprobacion.y = ElVectorRotacion.y != 0 ?   ElVectorRotacionComprobacion.y = 360 / ElVectorRotacion.y * vueltas * ElVectorRotacion.y : 0;
+        ElVectorRotacionComprobacion.z = ElVectorRotacion.z != 0 ?   ElVectorRotacionComprobacion.z = 360 / ElVectorRotacion.z * vueltas * ElVectorRotacion.z : 0;
         ElVectorFinal = ElVectorRotacionComprobacion;
-        
+        escalaFinal = transform.localScale;
     }
     private void Update()
     {
@@ -50,9 +55,8 @@ public class MovimientoPreciso : MonoBehaviour
 
         if (debeRotar == true)
         {
-            debeRotar2 = true;
-            //ElVectorRotacionComprobacion = ElVectorRotacion * 10000;
-            debeRotar = false;
+            GetComponent<Anclaje>().enabled = false;
+            escala(escalaInicial);
         }
         if (debeRotar2 && ElVectorRotacionComprobacion.x > 0 || ElVectorRotacionComprobacion.y > 0 || ElVectorRotacionComprobacion.z > 0)
         {
@@ -62,6 +66,10 @@ public class MovimientoPreciso : MonoBehaviour
         if (debeRotar2 && transform.position != puntoFinal.transform.position)
         {
             transporte();
+        }
+        if (debeRotar3)
+        {
+            escala(escalaFinal);
         }
         
     }
@@ -77,6 +85,8 @@ public class MovimientoPreciso : MonoBehaviour
         if (ElVectorRotacionComprobacion.magnitude <= 0.01f)
         {
             transform.rotation = LaRotacion.calcularRotacion(ElVectorFinal);
+            debeRotar2_1 = true;
+            debeRotar3 = debeRotar2_2 = true ? true : false;
         }
     }
 
@@ -84,13 +94,32 @@ public class MovimientoPreciso : MonoBehaviour
     void transporte()
     {
         transform.position = Vector3.Lerp(transform.position, puntoFinal.transform.position, Time.deltaTime * velocidadDeMovimiento);
-        if(Vector3.Distance(transform.position, puntoFinal.transform.position) <= 0.1f)
+        if(Vector3.Distance(transform.position, puntoFinal.transform.position) <= 0.3f)
         {
             transform.position = puntoFinal.transform.position;
+            debeRotar2_2 = true;
+            debeRotar3 = debeRotar2_1 = true ? true : false;
         }
     }
 
-
+    void escala(Vector3 escalaDeseada)
+    {
+        transform.localScale = Vector3.Lerp(transform.localScale, escalaDeseada, Time.deltaTime * velocidadDeMovimiento);
+        if (Vector3.Distance(transform.localScale, escalaDeseada) <= 0.3f)
+        {
+            transform.localScale = escalaDeseada;
+            if (debeRotar)
+            {
+                debeRotar2 = true;
+                debeRotar = false;
+            }
+            else if (debeRotar3)
+            {
+                debeRotar3 = false;
+                GetComponent<Anclaje>().enabled = true;
+            }
+        }
+    }
 
 
 

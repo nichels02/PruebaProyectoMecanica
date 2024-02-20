@@ -63,9 +63,9 @@ public class remplazoSeñalizar : MonoBehaviour
         if(inputSujetar == 1 &&   objetoColicionado != null   && objetoColicionado.tag=="objeto" && !estaSujetado)
         {
             estaSujetado = true;
-            if (objetoColicionado.GetComponent<anclaje>())
+            if (objetoColicionado.GetComponent<Anclaje>())
             {
-                objetoColicionadoPadre = objetoColicionado.GetComponent<anclaje>().EstaSiendoSujetado();
+                objetoColicionadoPadre = objetoColicionado.GetComponent<Anclaje>().EstaSiendoSujetado();
                 objetoColicionadoPadre.transform.parent = transform;
                 EstanAgarrandoElPadre = true;
                 //print(EstanAgarrandoElPadre);
@@ -126,14 +126,14 @@ public class remplazoSeñalizar : MonoBehaviour
     public void EventDesarmar(InputAction.CallbackContext value)
     {
         float inputDesarmar = value.ReadValue<float>();
-        if (objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<anclaje>()) 
+        if (objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Anclaje>()) 
         {
-            objetoColicionado.GetComponent<anclaje>().DesarmarPieza();
+            objetoColicionado.GetComponent<Anclaje>().DesarmarPieza();
         }
     }
 
 
-    public void UpdateAcercaryAlejar()
+    void UpdateAcercaryAlejar()
     {
         if(objetoColicionado != null && estaSujetado == true && acercarOAlejar == 1)
         {

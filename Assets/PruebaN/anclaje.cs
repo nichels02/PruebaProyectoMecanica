@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class anclaje : MonoBehaviour
+public class Anclaje : MonoBehaviour
 {
-    [SerializeField] List<anclaje> padres = new List<anclaje>();
+    [SerializeField] List<Anclaje> padres = new List<Anclaje>();
     [SerializeField] GameObject objetoPadre;
-    [SerializeField] GameObject hermano;
     bool estaDesarmado = false;
     bool EstaSuelto = false;
 
@@ -15,7 +13,10 @@ public class anclaje : MonoBehaviour
 
 
 
-
+    private void Start()
+    {
+        
+    }
     public GameObject EstaSiendoSujetado()
     {
         //print("llego");

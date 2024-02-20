@@ -141,9 +141,9 @@ public class Senalizar : MonoBehaviour
         float inputSujetar = value.ReadValue<float>();
         if (inputSujetar == 1)
         {
-            if(objetoColicionado!=null && !estaSujetandoAlgo && objetoColicionado.GetComponent<anclaje>())
+            if(objetoColicionado!=null && !estaSujetandoAlgo && objetoColicionado.GetComponent<Anclaje>())
             {
-                objetoColicionado.GetComponent<anclaje>().DesarmarPieza();
+                objetoColicionado.GetComponent<Anclaje>().DesarmarPieza();
             }
 
             /*
@@ -174,9 +174,9 @@ public class Senalizar : MonoBehaviour
                 raycastDistance = hit.distance;
                 endPos = transform.position + transform.forward * raycastDistance;
                 estaSujetandoAlgo = true;
-                if (hit.collider.gameObject.GetComponent<anclaje>() != null)
+                if (hit.collider.gameObject.GetComponent<Anclaje>() != null)
                 {
-                    objetoColicionado = hit.collider.gameObject.GetComponent<anclaje>().EstaSiendoSujetado();
+                    objetoColicionado = hit.collider.gameObject.GetComponent<Anclaje>().EstaSiendoSujetado();
                 }
                 else
                 {
