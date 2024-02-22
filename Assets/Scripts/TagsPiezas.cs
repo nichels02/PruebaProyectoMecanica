@@ -42,7 +42,7 @@ public class TagsPiezas : MonoBehaviour
 
     public void MoverHaciaDestino()
     {
-        float distancia =09++++ +;
+        float distancia =09;
         if (prueba3.gameObject != null)
         {
             distancia = Vector3.Distance(prueba3.position, transform.position);
@@ -71,8 +71,8 @@ public class TagsPiezas : MonoBehaviour
     }
     public void MaterialOriginal()
     {
-        Material mat = prueba3.GetChild(0).GetComponent<MeshRenderer>().material;
+        /*Material mat = prueba3.GetChild(0).GetComponent<MeshRenderer>().material;
         MeshRenderer transformT = transform.GetChild(0).GetComponent<MeshRenderer>();
-        transformT.material=  mat ;
+        transformT.material=  mat ;*/
     }
 }
