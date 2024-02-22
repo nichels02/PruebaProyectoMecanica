@@ -63,9 +63,9 @@ public class remplazoSeñalizar : MonoBehaviour
         if(inputSujetar == 1 &&   objetoColicionado != null   && objetoColicionado.tag=="objeto" && !estaSujetado)
         {
             estaSujetado = true;
-            if (objetoColicionado.GetComponent<Anclaje>())
+            if (objetoColicionado.GetComponent<Interaccion>())
             {
-                objetoColicionadoPadre = objetoColicionado.GetComponent<Anclaje>().EstaSiendoSujetado();
+                objetoColicionadoPadre = objetoColicionado.GetComponent<Interaccion>().RecibirObjeto();
                 objetoColicionadoPadre.transform.parent = transform;
                 EstanAgarrandoElPadre = true;
                 //print(EstanAgarrandoElPadre);
