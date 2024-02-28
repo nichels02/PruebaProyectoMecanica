@@ -93,9 +93,9 @@ public class Senalizar : MonoBehaviour
     }
     public void EventRotateObject(InputAction.CallbackContext value)
     {
-        print("1");
+        //print("1");
         LaRotacion = value.ReadValue<Vector2>();
-        print(LaRotacion);
+        //print(LaRotacion);
         rotate = (LaRotacion != Vector2.zero) ? true : false;
 
     }
@@ -141,6 +141,12 @@ public class Senalizar : MonoBehaviour
         float inputSujetar = value.ReadValue<float>();
         if (inputSujetar == 1)
         {
+            if(objetoColicionado!=null && !estaSujetandoAlgo && objetoColicionado.GetComponent<Anclaje>())
+            {
+                objetoColicionado.GetComponent<Anclaje>().DesarmarPieza();
+            }
+
+            /*
             if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, raycastDistance, maskCollider))
             {
                 if (hit.collider.gameObject.GetComponent<anclaje>() != null)
@@ -148,6 +154,7 @@ public class Senalizar : MonoBehaviour
                     hit.collider.gameObject.GetComponent<anclaje>().DesarmarPieza();
                 }
             }
+            */
         }
 
     }
@@ -167,9 +174,9 @@ public class Senalizar : MonoBehaviour
                 raycastDistance = hit.distance;
                 endPos = transform.position + transform.forward * raycastDistance;
                 estaSujetandoAlgo = true;
-                if (hit.collider.gameObject.GetComponent<anclaje>() != null)
+                if (hit.collider.gameObject.GetComponent<Anclaje>() != null)
                 {
-                    objetoColicionado = hit.collider.gameObject.GetComponent<anclaje>().EstaSiendoSujetado();
+                    objetoColicionado = hit.collider.gameObject.GetComponent<Anclaje>().EstaSiendoSujetado();
                 }
                 else
                 {

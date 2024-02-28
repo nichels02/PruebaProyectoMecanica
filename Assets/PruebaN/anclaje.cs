@@ -1,31 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class anclaje : MonoBehaviour
+public class Anclaje : MonoBehaviour
 {
-    [SerializeField] List<anclaje> padres = new List<anclaje>();
+    [SerializeField] List<Anclaje> padres = new List<Anclaje>();
     [SerializeField] GameObject objetoPadre;
     bool estaDesarmado = false;
     bool EstaSuelto = false;
 
 
+
+
+
     private void Start()
     {
-        if (padres.Count == 0)
-        {
-            EstaSuelto = true;
-        }
+        
     }
-
-
     public GameObject EstaSiendoSujetado()
     {
-
+        //print("llego");
         if (EstaSuelto == false)
         {
             //se lleva el objetoPadre
+            objetoPadre.GetComponent<ObjetoPadre>().ReubicarPadre(transform.position);
             return objetoPadre;
         }
         else
@@ -40,7 +38,12 @@ public class anclaje : MonoBehaviour
 
     public void DesarmarPieza()
     {
-        if (EstaSuelto == false)
+        if (padres.Count == 0 && !EstaSuelto)
+        {
+            SiSeDesarmara();
+            EstaSuelto = true;
+        }
+        else if (!EstaSuelto)
         {
             bool tmp = false;
             for (int i = 0; i < padres.Count; i++)
@@ -54,11 +57,19 @@ public class anclaje : MonoBehaviour
             if (tmp == false)
             {
                 EstaSuelto = true;
-                //se desarma
+                SiSeDesarmara();
+            }
+            else
+            {
+                //suena Sonido de fallido
             }
         }
-        
+    }
 
+
+    void SiSeDesarmara()
+    {
+        GetComponent<MovimientoPreciso>().DebeRotar = true;
     }
 
 

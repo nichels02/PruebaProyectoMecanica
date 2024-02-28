@@ -96,6 +96,7 @@
                     "initialStateCheck": true
                 },
                 {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                     "name": "AcercarLazerRightButton_B",
                     "type": "Value",
@@ -105,20 +106,32 @@
                     "type": "Button",
                     "id": "e7a39fef-b405-4667-8cf9-48dc80f6e178",
 >>>>>>> Stashed changes
+=======
+                    "name": "AlejarYAcercarLazerRightButton_A",
+                    "type": "Button",
+                    "id": "e7a39fef-b405-4667-8cf9-48dc80f6e178",
+>>>>>>> pruebaBorradoDelInutil
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                     "name": "AlejarLazerRightButton_A",
                     "type": "Value",
                     "id": "e7a39fef-b405-4667-8cf9-48dc80f6e178",
+=======
+                    "name": "AlejarYAcercarLazerLeftButton_A",
+                    "type": "Button",
+                    "id": "6240e372-965b-410b-9f49-b1b68e633b93",
+>>>>>>> pruebaBorradoDelInutil
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+<<<<<<< HEAD
 =======
                     "name": "AlejarYAcercarLazerIzquierda",
                     "type": "Value",
@@ -130,6 +143,11 @@
                 },
                 {
                     "name": "desarmarDerecha",
+=======
+                },
+                {
+                    "name": "desarmarD",
+>>>>>>> pruebaBorradoDelInutil
                     "type": "PassThrough",
                     "id": "dea6410b-9431-4eb6-9d29-a4d7ba665992",
                     "expectedControlType": "Button",
@@ -138,14 +156,23 @@
                     "initialStateCheck": false
                 },
                 {
+<<<<<<< HEAD
                     "name": "desarmarIzquierda",
                     "type": "Button",
                     "id": "1eb3540c-2dbd-43ac-83e7-cf37328f6758",
+=======
+                    "name": "desarmarI",
+                    "type": "PassThrough",
+                    "id": "0c6ed284-d2b2-4a79-9c25-7b2b671ce2f4",
+>>>>>>> pruebaBorradoDelInutil
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> pruebaBorradoDelInutil
                 }
             ],
             "bindings": [
@@ -348,27 +375,17 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "68f82003-ccf6-4678-a52f-3fd60e5034d9",
-                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/secondarybutton",
+                    "name": "1D Axis",
+                    "id": "76cb1cbf-bd94-4756-bb17-d902b954bcd2",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                     "action": "AcercarLazerRightButton_B",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "03e93e27-21b7-4595-82cf-4df4d9a72370",
-                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/primarybutton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "AlejarLazerRightButton_A",
 =======
-                    "action": "AlejarYAcercarLazerDerecha",
+                    "action": "AlejarYAcercarLazerRightButton_A",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -379,7 +396,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AlejarYAcercarLazerDerecha",
+                    "action": "AlejarYAcercarLazerRightButton_A",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -390,12 +407,82 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "AlejarYAcercarLazerDerecha",
+                    "action": "AlejarYAcercarLazerRightButton_A",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "",
+                    "id": "2c8b446f-8667-4e11-8f93-71e9697b4c01",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerRight>{RightHand}/grippressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "desarmarD",
+>>>>>>> pruebaBorradoDelInutil
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "fdd30fa4-6743-4352-9aeb-7029e3cf39e6",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+<<<<<<< HEAD
+                    "action": "AlejarLazerRightButton_A",
+=======
+                    "action": "AlejarYAcercarLazerDerecha",
+=======
+                    "action": "AlejarYAcercarLazerLeftButton_A",
+>>>>>>> pruebaBorradoDelInutil
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+<<<<<<< HEAD
+                    "id": "5fc8d2e2-4481-4ed0-9e44-e138be228503",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlejarYAcercarLazerDerecha",
+=======
+                    "id": "cc70eab0-4e09-41b2-bac9-f19d0620caaf",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/secondarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlejarYAcercarLazerLeftButton_A",
+>>>>>>> pruebaBorradoDelInutil
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+<<<<<<< HEAD
+                    "id": "ce5979ad-d07f-46eb-9c68-820ce0ac514e",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlejarYAcercarLazerDerecha",
+=======
+                    "id": "1bb51524-96a8-41dc-a3df-2650d80ea15d",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/primarybutton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AlejarYAcercarLazerLeftButton_A",
+>>>>>>> pruebaBorradoDelInutil
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+<<<<<<< HEAD
                     "id": "2c8b446f-8667-4e11-8f93-71e9697b4c01",
                     "path": "<XRController>{RightHand}/gripPressed",
                     "interactions": "",
@@ -441,12 +528,19 @@
                 {
                     "name": "",
                     "id": "c819ddf0-8a3e-4ab7-b526-fec6caa68c1e",
+=======
+                    "id": "bf86d49d-5a91-49ac-a517-5eac29156f41",
+>>>>>>> pruebaBorradoDelInutil
                     "path": "<XRInputV1::Oculus::OculusTouchControllerLeft>{LeftHand}/grippressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+<<<<<<< HEAD
                     "action": "desarmarIzquierda",
 >>>>>>> Stashed changes
+=======
+                    "action": "desarmarI",
+>>>>>>> pruebaBorradoDelInutil
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
