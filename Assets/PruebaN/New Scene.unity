@@ -957,6 +957,8 @@ GameObject:
   - component: {fileID: 342173083}
   - component: {fileID: 342173082}
   - component: {fileID: 342173081}
+  - component: {fileID: 342173085}
+  - component: {fileID: 342173086}
   m_Layer: 6
   m_Name: Cube (3)
   m_TagString: objeto
@@ -1065,6 +1067,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342173079}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &342173085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342173079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4e58c1d9fc1a247811aeba054070f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objeto: {fileID: 342173081}
+--- !u!114 &342173086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342173079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f213479fe8622b46baa03ae9f485048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaRotacion: {fileID: 0}
+  velocidad: 1500
+  velocidadDeMovimiento: 1
+  ElVectorRotacion: {x: 0.5, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 3}
+  vueltas: 3
+  debeRotar: 0
+  puntoFinal: {fileID: 1634414674}
 --- !u!1 &360078166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1113,8 @@ GameObject:
   - component: {fileID: 360078170}
   - component: {fileID: 360078169}
   - component: {fileID: 360078168}
+  - component: {fileID: 360078172}
+  - component: {fileID: 360078173}
   m_Layer: 6
   m_Name: Cube (5)
   m_TagString: objeto
@@ -1185,6 +1222,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360078166}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &360078172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360078166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4e58c1d9fc1a247811aeba054070f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objeto: {fileID: 360078168}
+--- !u!114 &360078173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360078166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f213479fe8622b46baa03ae9f485048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaRotacion: {fileID: 0}
+  velocidad: 1500
+  velocidadDeMovimiento: 1
+  ElVectorRotacion: {x: 0.5, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 2}
+  vueltas: 3
+  debeRotar: 0
+  puntoFinal: {fileID: 595059881}
 --- !u!1 &363736287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,6 +1680,9 @@ Transform:
   - {fileID: 342173080}
   - {fileID: 1280239685}
   - {fileID: 360078167}
+  - {fileID: 1634414675}
+  - {fileID: 1652930284}
+  - {fileID: 595059882}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &571433788
@@ -1624,6 +1697,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccc22f8b168f4a24caf9bdb300f4f227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &595059881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 595059882}
+  m_Layer: 0
+  m_Name: puntoFinal5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &595059882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595059881}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.5176501, z: 8.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 571433787}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &600417823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2997,6 +3101,8 @@ GameObject:
   - component: {fileID: 1280239688}
   - component: {fileID: 1280239687}
   - component: {fileID: 1280239686}
+  - component: {fileID: 1280239690}
+  - component: {fileID: 1280239691}
   m_Layer: 6
   m_Name: Cube (4)
   m_TagString: objeto
@@ -3105,6 +3211,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280239684}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1280239690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280239684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4e58c1d9fc1a247811aeba054070f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Objeto: {fileID: 1280239686}
+--- !u!114 &1280239691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280239684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f213479fe8622b46baa03ae9f485048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LaRotacion: {fileID: 0}
+  velocidad: 1500
+  velocidadDeMovimiento: 1
+  ElVectorRotacion: {x: 0.5, y: 0, z: 0}
+  escalaInicial: {x: 5, y: 1, z: 1}
+  vueltas: 3
+  debeRotar: 0
+  puntoFinal: {fileID: 1652930283}
 --- !u!1 &1298797264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3831,6 +3970,68 @@ Transform:
   - {fileID: 942999359}
   - {fileID: 4985312739401533271}
   m_Father: {fileID: 5388966878083089351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1634414674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1634414675}
+  m_Layer: 0
+  m_Name: puntoFinal3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1634414675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634414674}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.5176501, z: -10.5857315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 571433787}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1652930283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652930284}
+  m_Layer: 0
+  m_Name: puntoFinal4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1652930284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652930283}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.690002, y: 3.5176501, z: -1.205729}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 571433787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659658183
 GameObject:

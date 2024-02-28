@@ -22,12 +22,13 @@ public class Anclaje : MonoBehaviour
         //print("llego");
         if (EstaSuelto == false)
         {
-            //se lleva el objetoPadre
+            print("se lleva el objetoPadre");
             objetoPadre.GetComponent<ObjetoPadre>().ReubicarPadre(transform.position);
             return objetoPadre;
         }
         else
         {
+            print("se lleva al hijo");
             //se lleva el objeto suelto
             estaDesarmado = true;
             return gameObject;

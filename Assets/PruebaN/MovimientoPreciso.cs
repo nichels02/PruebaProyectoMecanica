@@ -6,8 +6,8 @@ using UnityEngine;
 public class MovimientoPreciso : MonoBehaviour
 {
     [SerializeField] Rotacion LaRotacion;
-    [SerializeField] int velocidad = 100;
-    [SerializeField] int velocidadDeMovimiento = 100;
+    [SerializeField] int velocidad = 1500;
+    [SerializeField] int velocidadDeMovimiento = 1;
     [SerializeField] Vector3 ElVectorRotacion;
     [SerializeField] Vector3 escalaInicial;
     Vector3 escalaFinal;
@@ -70,6 +70,7 @@ public class MovimientoPreciso : MonoBehaviour
         if (debeRotar3)
         {
             escala(escalaFinal);
+            
         }
         
     }
@@ -117,6 +118,7 @@ public class MovimientoPreciso : MonoBehaviour
             {
                 debeRotar3 = false;
                 GetComponent<Anclaje>().enabled = true;
+                GetComponent<MovimientoPreciso>().enabled = false;
             }
         }
     }
