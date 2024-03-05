@@ -8,22 +8,27 @@ public class Anclaje : MonoBehaviour
     [SerializeField] GameObject objetoPadre;
     bool estaDesarmado = false;
     bool EstaSuelto = false;
-
+    Renderer MyRenderer;
+    Material MaterialGuardado;
+    [SerializeField] Material materialT;
+    [SerializeField] Material materialF;
 
 
 
 
     private void Start()
     {
-        
+        MyRenderer = GetComponent<Renderer>();
+        MaterialGuardado = MyRenderer.material;
     }
     public GameObject EstaSiendoSujetado()
     {
         //print("llego");
         if (EstaSuelto == false)
         {
-            print("se lleva el objetoPadre");
+            print(objetoPadre.name);
             objetoPadre.GetComponent<ObjetoPadre>().ReubicarPadre(transform.position);
+            
             return objetoPadre;
         }
         else
@@ -74,6 +79,43 @@ public class Anclaje : MonoBehaviour
     }
 
 
+    public void CambiarColor()
+    {
+        if (padres.Count == 0 && !EstaSuelto)
+        {
+            Color(materialT);
+        }
+        else if (!EstaSuelto)
+        {
+            bool tmp = false;
+            for (int i = 0; i < padres.Count; i++)
+            {
+                if (padres[i] != null && padres[i].estaDesarmado == false)
+                {
+                    tmp = true;
+                }
+            }
 
+            if (tmp == false)
+            {
+                Color(materialT);
+            }
+            else
+            {
+                Color(materialF);
+            }
+        }
+    }
+
+    void Color(Material color)
+    {
+        MaterialGuardado = MyRenderer.material;
+        MyRenderer.material = color;
+    }
+
+    public void RegresarColor()
+    {
+        MyRenderer.material = MaterialGuardado;
+    }
 
 }

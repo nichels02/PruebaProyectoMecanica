@@ -60,7 +60,7 @@ public class MovimientoPreciso : MonoBehaviour
         }
         if (debeRotar2 && ElVectorRotacionComprobacion.x > 0 || ElVectorRotacionComprobacion.y > 0 || ElVectorRotacionComprobacion.z > 0)
         {
-            print(ElVectorRotacionComprobacion);
+            //print(ElVectorRotacionComprobacion);
             rotar();
         }
         if (debeRotar2 && transform.position != puntoFinal.transform.position)

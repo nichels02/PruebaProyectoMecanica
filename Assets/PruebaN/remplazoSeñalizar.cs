@@ -7,7 +7,7 @@ public class remplazoSeñalizar : MonoBehaviour
 {
     [SerializeField] float raycastDistance = 10f;
     LineRenderer lineRenderer;
-    GameObject objetoColicionado;
+    [SerializeField] GameObject objetoColicionado;
     GameObject objetoColicionadoPadre;
     bool estaSujetado = false;
     Vector3 PosicionParaRemplazar;
@@ -35,18 +35,26 @@ public class remplazoSeñalizar : MonoBehaviour
             lineRenderer.SetPosition(1, hit.point);
             if (EstanAgarrandoElPadre == false)
             {
+                //cambiarColor(hit.collider.gameObject,objetoColicionado);
                 objetoColicionado = hit.collider.gameObject;
+                //print(objetoColicionado.name);
+                //objetoColicionado.GetComponent<Anclaje>().CambiarColor();
             }
             PosicionParaRemplazar = hit.point;
             //print(PosicionParaRemplazar);
+            print("a");
         }
         else
         {
             // Si no hay colisión, establece la posición final a la distancia máxima
+            
+            
+            
             Vector3 endPos = startPos + transform.forward * raycastDistance;
             lineRenderer.SetPosition(0, startPos);
             lineRenderer.SetPosition(1, endPos);
             objetoColicionado = null;
+            print("b");
         }
 
         if (RegularDistancia == true)
@@ -69,6 +77,7 @@ public class remplazoSeñalizar : MonoBehaviour
                 objetoColicionadoPadre.transform.parent = transform;
                 EstanAgarrandoElPadre = true;
                 //print(EstanAgarrandoElPadre);
+                //print("1");
             }
             else
             {
@@ -125,6 +134,7 @@ public class remplazoSeñalizar : MonoBehaviour
 
     public void EventDesarmar(InputAction.CallbackContext value)
     {
+        print("llego al evento");
         float inputDesarmar = value.ReadValue<float>();
         if (objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Anclaje>()) 
         {
@@ -202,6 +212,17 @@ public class remplazoSeñalizar : MonoBehaviour
     }
 
 
-
+    void cambiarColor(GameObject ElNuevo, GameObject ElAntiguo)
+    {
+        ////print("111111");
+        if (ElAntiguo.GetComponent<Interaccion>() && ElAntiguo != null) 
+        {
+            ElAntiguo.GetComponent<Interaccion>().color(false);
+        }
+        if (ElNuevo.GetComponent<Interaccion>())
+        {
+            ElNuevo.GetComponent<Interaccion>().color(true);
+        }
+    }
 
 }
