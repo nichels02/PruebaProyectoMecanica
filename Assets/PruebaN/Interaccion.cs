@@ -15,6 +15,10 @@ public class Interaccion : MonoBehaviour
         return gameObject;
     }
 
+    public void desarmar()
+    {
+        Objeto.DesarmarPieza();
+    }
     public void color(bool entradaOSalida)
     {
         if (entradaOSalida)

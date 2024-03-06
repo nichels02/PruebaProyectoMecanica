@@ -452,6 +452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 0}
+  EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
 --- !u!1 &123566920
@@ -944,6 +945,7 @@ MonoBehaviour:
   padres:
   - {fileID: 1280239686}
   objetoPadre: {fileID: 571433786}
+  EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
 --- !u!65 &342173082
@@ -1167,6 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 571433786}
+  EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
 --- !u!65 &360078169
@@ -2985,6 +2988,7 @@ MonoBehaviour:
   padres:
   - {fileID: 360078168}
   objetoPadre: {fileID: 571433786}
+  EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
 --- !u!65 &1280239687
@@ -3857,126 +3861,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 200449804}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1741733552
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1741733553}
-  - component: {fileID: 1741733557}
-  - component: {fileID: 1741733556}
-  - component: {fileID: 1741733555}
-  - component: {fileID: 1741733554}
-  m_Layer: 0
-  m_Name: Tube003 (1)P
-  m_TagString: objeto
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1741733553
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741733552}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 4.5705272e-17, z: -2.4074579e-18, w: 0.7071068}
-  m_LocalPosition: {x: -0.00020000373, y: 0, z: 0}
-  m_LocalScale: {x: 0.33, y: 0.3506252, z: -0.017531259}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 7445659750712384360}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1741733554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741733552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c4e58c1d9fc1a247811aeba054070f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Objeto: {fileID: 7445659750712384361}
---- !u!64 &1741733555
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741733552}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4213158513453270221, guid: d10e7a7fcf262a248910d886fdba6b75, type: 3}
---- !u!23 &1741733556
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741733552}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1741733557
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741733552}
-  m_Mesh: {fileID: -4213158513453270221, guid: d10e7a7fcf262a248910d886fdba6b75, type: 3}
 --- !u!1 &1814920208
 GameObject:
   m_ObjectHideFlags: 0
@@ -5261,6 +5145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 0}
+  EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
 --- !u!114 &1090312830865863932
@@ -6397,6 +6282,7 @@ MonoBehaviour:
   padres:
   - {fileID: 7500678801090395926}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &3461429151391406107
@@ -6415,7 +6301,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 1594603478}
@@ -6458,6 +6344,7 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &3484668274551187532
@@ -7154,6 +7041,7 @@ MonoBehaviour:
   - {fileID: 5144434836122399804}
   - {fileID: 8899592266448648975}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &4513707694021315241
@@ -7172,7 +7060,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 1482828907}
@@ -7431,6 +7319,7 @@ MonoBehaviour:
   padres:
   - {fileID: 8098375400675721737}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &4979408838477245936
@@ -7449,7 +7338,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 386667075}
@@ -7527,15 +7416,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7151248591083987513, guid: 37db9e2c97fc8594b94888c0f5982bcb, type: 3}
       propertyPath: m_Parameters.widthMultiplier
-      value: 0.001
+      value: 0.025054766
       objectReference: {fileID: 0}
     - target: {fileID: 7151248591083987513, guid: 37db9e2c97fc8594b94888c0f5982bcb, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
-      value: 0.12973207
+      value: 0.18749422
       objectReference: {fileID: 0}
     - target: {fileID: 7151248591083987513, guid: 37db9e2c97fc8594b94888c0f5982bcb, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.2833695
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7624,6 +7513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &5144434836122399805
@@ -7642,7 +7532,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 0.5, y: 1, z: 0.5}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 1091052775}
@@ -8120,6 +8010,7 @@ MonoBehaviour:
   padres:
   - {fileID: 8846458024162779048}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &6271916187162985386
@@ -8258,6 +8149,7 @@ MonoBehaviour:
   - {fileID: 3461429151391406106}
   - {fileID: 8896799240708643853}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &6387807666669469058
@@ -8276,7 +8168,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 162498584}
@@ -8315,6 +8207,7 @@ MonoBehaviour:
   padres:
   - {fileID: 6387807666669469057}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &6389454739296075438
@@ -8333,7 +8226,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 1466062853}
@@ -8506,7 +8399,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.37197638, y: 0.37197638, z: 0.37197638}
+  m_LocalScale: {x: 0.37197638, y: 0.22, z: 0.37197638}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1184243231376947989}
@@ -8577,6 +8470,7 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &6594159059511263658
@@ -8704,6 +8598,7 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &6973900642349314982
@@ -9038,6 +8933,7 @@ MonoBehaviour:
   - {fileID: 8752402040317848629}
   - {fileID: 7445659750712384361}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &7401162158308750681
@@ -9056,7 +8952,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 475196879}
@@ -9070,11 +8966,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.0009, z: 0}
-  m_LocalScale: {x: 0.91, y: 1.48, z: 0.91}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5765888414249334405}
-  - {fileID: 1741733553}
   m_Father: {fileID: 1428414997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7445659750712384361
@@ -9091,6 +8986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &7445659750712384362
@@ -9186,6 +9082,7 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &7479309556358866301
@@ -9204,7 +9101,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 1815473335}
@@ -9265,6 +9162,7 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &7500678801090395927
@@ -9283,7 +9181,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 475650059}
@@ -9310,6 +9208,7 @@ MonoBehaviour:
   padres:
   - {fileID: 8846458024162779048}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &7554001784879113888
@@ -9328,7 +9227,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 12920623}
@@ -9645,6 +9544,7 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &7883253338322914090
@@ -9794,6 +9694,7 @@ MonoBehaviour:
   padres:
   - {fileID: 8846458024162779048}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8014630126904031019
@@ -9871,6 +9772,7 @@ MonoBehaviour:
   padres:
   - {fileID: 8902878523644219988}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8098375400675721738
@@ -9889,7 +9791,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 1128546665}
@@ -10107,6 +10009,7 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8390840958772994047
@@ -10125,7 +10028,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 226441405}
@@ -10164,6 +10067,7 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8458343406381286216
@@ -10252,6 +10156,7 @@ MonoBehaviour:
   padres:
   - {fileID: 1090312830865863931}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8526212464804785425
@@ -10270,7 +10175,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 1357755232}
@@ -10430,6 +10335,7 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8717609099314735718
@@ -10475,6 +10381,7 @@ MonoBehaviour:
   padres:
   - {fileID: 8826223688232572759}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8717679324945720451
@@ -10493,7 +10400,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 1439736890}
@@ -10554,6 +10461,7 @@ MonoBehaviour:
   padres:
   - {fileID: 8846458024162779048}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8718116626053080503
@@ -10665,6 +10573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8752402040317848630
@@ -10773,6 +10682,7 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8826223688232572760
@@ -10791,7 +10701,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 2131679168}
@@ -10831,6 +10741,7 @@ MonoBehaviour:
   - {fileID: 8390840958772994046}
   - {fileID: 4513707694021315240}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8846458024162779049
@@ -10849,7 +10760,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 1638859633}
@@ -10910,6 +10821,7 @@ MonoBehaviour:
   padres:
   - {fileID: 7554001784879113887}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8866418728018776016
@@ -10928,7 +10840,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 332340927}
@@ -10963,6 +10875,7 @@ MonoBehaviour:
   padres:
   - {fileID: 7479309556358866300}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8896799240708643854
@@ -10981,7 +10894,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 72885864}
@@ -11096,6 +11009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8899592266448648976
@@ -11114,7 +11028,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 0.5, y: 1, z: 0.5}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 581354292}
@@ -11153,6 +11067,7 @@ MonoBehaviour:
   padres:
   - {fileID: 7401162158308750680}
   objetoPadre: {fileID: 1090312830865863930}
+  EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!114 &8902878523644219989
@@ -11171,7 +11086,7 @@ MonoBehaviour:
   velocidad: 1500
   velocidadDeMovimiento: 1
   ElVectorRotacion: {x: 0, y: 0, z: 0}
-  escalaInicial: {x: 0, y: 0, z: 0}
+  escalaInicial: {x: 1, y: 1, z: 1}
   vueltas: 0
   debeRotar: 0
   puntoFinal: {fileID: 160570011}

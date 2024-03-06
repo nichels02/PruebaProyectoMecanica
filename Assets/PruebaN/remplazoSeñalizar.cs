@@ -136,9 +136,9 @@ public class remplazoSeñalizar : MonoBehaviour
     {
         print("llego al evento");
         float inputDesarmar = value.ReadValue<float>();
-        if (objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Anclaje>()) 
+        if (objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Interaccion>()) 
         {
-            objetoColicionado.GetComponent<Anclaje>().DesarmarPieza();
+            objetoColicionado.GetComponent<Interaccion>().desarmar();
         }
     }
 

@@ -7,7 +7,7 @@ public class Anclaje : MonoBehaviour
     [SerializeField] List<Anclaje> padres = new List<Anclaje>();
     [SerializeField] GameObject objetoPadre;
     bool estaDesarmado = false;
-    bool EstaSuelto = false;
+    public bool EstaSuelto = false;
     Renderer MyRenderer;
     Material MaterialGuardado;
     [SerializeField] Material materialT;
@@ -62,7 +62,7 @@ public class Anclaje : MonoBehaviour
 
             if (tmp == false)
             {
-                EstaSuelto = true;
+                //EstaSuelto = true;
                 SiSeDesarmara();
             }
             else

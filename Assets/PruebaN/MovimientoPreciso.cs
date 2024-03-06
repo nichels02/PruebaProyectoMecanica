@@ -95,7 +95,7 @@ public class MovimientoPreciso : MonoBehaviour
     void transporte()
     {
         transform.position = Vector3.Lerp(transform.position, puntoFinal.transform.position, Time.deltaTime * velocidadDeMovimiento);
-        if(Vector3.Distance(transform.position, puntoFinal.transform.position) <= 0.3f)
+        if(Vector3.Distance(transform.position, puntoFinal.transform.position) <= 0.04f)
         {
             transform.position = puntoFinal.transform.position;
             debeRotar2_2 = true;
@@ -106,7 +106,7 @@ public class MovimientoPreciso : MonoBehaviour
     void escala(Vector3 escalaDeseada)
     {
         transform.localScale = Vector3.Lerp(transform.localScale, escalaDeseada, Time.deltaTime * velocidadDeMovimiento);
-        if (Vector3.Distance(transform.localScale, escalaDeseada) <= 0.3f)
+        if (Vector3.Distance(transform.localScale, escalaDeseada) <= 0.04f)
         {
             transform.localScale = escalaDeseada;
             if (debeRotar)
@@ -117,6 +117,7 @@ public class MovimientoPreciso : MonoBehaviour
             else if (debeRotar3)
             {
                 debeRotar3 = false;
+                GetComponent<Anclaje>().EstaSuelto = true; 
                 GetComponent<Anclaje>().enabled = true;
                 GetComponent<MovimientoPreciso>().enabled = false;
             }
