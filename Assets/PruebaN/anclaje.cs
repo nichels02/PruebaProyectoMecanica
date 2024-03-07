@@ -47,7 +47,6 @@ public class Anclaje : MonoBehaviour
         if (padres.Count == 0 && !EstaSuelto)
         {
             SiSeDesarmara();
-            EstaSuelto = true;
         }
         else if (!EstaSuelto)
         {

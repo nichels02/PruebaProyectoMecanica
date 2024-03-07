@@ -184,7 +184,7 @@ public class remplazoSeñalizar : MonoBehaviour
 
     void Acercar(GameObject objeto)
     {
-        print(objeto.name);
+        //print(objeto.name);
         float distancia = Vector3.Distance(objeto.transform.position, transform.position);
         if (distancia > 2)
         {
@@ -192,10 +192,10 @@ public class remplazoSeñalizar : MonoBehaviour
             Vector3 direction = (transform.position - PosicionParaRemplazar).normalized;
             //print(direction);
             Vector3 posicionReal = objeto.transform.position;
-            posicionReal += direction * Time.deltaTime * 50;
+            posicionReal += direction * Time.deltaTime * 12.5f;
             objeto.transform.position = posicionReal;
-            raycastDistance -= Time.deltaTime * 25;
-            print("acercar " + objeto.name);
+            raycastDistance -= Time.deltaTime * 6.25f;
+            //print("acercar " + objeto.name);
         }
     }
 
@@ -205,9 +205,9 @@ public class remplazoSeñalizar : MonoBehaviour
         Vector3 direction = (PosicionParaRemplazar - transform.position).normalized;
         //print(direction);
         Vector3 posicionReal = objeto.transform.position;
-        posicionReal += direction * Time.deltaTime * 50;
+        posicionReal += direction * Time.deltaTime * 12.5f;
         objeto.transform.position = posicionReal;
-        raycastDistance += Time.deltaTime * 50;
+        raycastDistance += Time.deltaTime * 12.5f;
         print("alejar " + objeto.name);
     }
 
