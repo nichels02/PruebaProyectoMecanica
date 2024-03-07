@@ -42,7 +42,7 @@ public class remplazoSeñalizar : MonoBehaviour
             }
             PosicionParaRemplazar = hit.point;
             //print(PosicionParaRemplazar);
-            print("a");
+            //print("a");
         }
         else
         {
@@ -54,7 +54,7 @@ public class remplazoSeñalizar : MonoBehaviour
             lineRenderer.SetPosition(0, startPos);
             lineRenderer.SetPosition(1, endPos);
             objetoColicionado = null;
-            print("b");
+            //print("b");
         }
 
         if (RegularDistancia == true)
@@ -116,6 +116,7 @@ public class remplazoSeñalizar : MonoBehaviour
                 //print("1");
                 elvector = objetoColicionadoPadre.transform.rotation.eulerAngles + elvector * Time.deltaTime * 100;
                 objetoColicionadoPadre.transform.rotation = Quaternion.Euler(elvector);
+                print("evento moverse" + name);
             }
             else
             {
@@ -134,7 +135,7 @@ public class remplazoSeñalizar : MonoBehaviour
 
     public void EventDesarmar(InputAction.CallbackContext value)
     {
-        print("llego al evento");
+        print("evento desarmar" + name);
         float inputDesarmar = value.ReadValue<float>();
         if (objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Interaccion>()) 
         {
@@ -149,7 +150,7 @@ public class remplazoSeñalizar : MonoBehaviour
         {
             if (EstanAgarrandoElPadre == true)
             {
-                print("1");
+                //print("1");
                 Acercar(objetoColicionadoPadre);
             }
             else
@@ -208,7 +209,7 @@ public class remplazoSeñalizar : MonoBehaviour
         posicionReal += direction * Time.deltaTime * 12.5f;
         objeto.transform.position = posicionReal;
         raycastDistance += Time.deltaTime * 12.5f;
-        print("alejar " + objeto.name);
+        //print("alejar " + objeto.name);
     }
 
 

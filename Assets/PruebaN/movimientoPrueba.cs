@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class movimientoPrueba : MonoBehaviour
 {
+    [SerializeField] Vector3 posicion;
+    [SerializeField] Quaternion Rotacion;
     //[SerializeField] Transform cubo;
 
 
@@ -13,7 +15,7 @@ public class movimientoPrueba : MonoBehaviour
     public void OnMovement(InputAction.CallbackContext value)
     {
         Vector3 inputMovement = value.ReadValue<Vector3>();
-        transform.position = inputMovement;
+        transform.position = inputMovement + posicion;
     }
 
     public void OnRotation (InputAction.CallbackContext value)

@@ -6,6 +6,8 @@ public class Anclaje : MonoBehaviour
 {
     [SerializeField] List<Anclaje> padres = new List<Anclaje>();
     [SerializeField] GameObject objetoPadre;
+    [SerializeField] Anclaje ElPadreDeEstaPieza;
+    [SerializeField] bool EsHijoDeOtraPieza = false;
     bool estaDesarmado = false;
     public bool EstaSuelto = false;
     Renderer MyRenderer;
@@ -23,17 +25,25 @@ public class Anclaje : MonoBehaviour
     }
     public GameObject EstaSiendoSujetado()
     {
-        //print("llego");
+        print("llego al metodo de sujertar" + name);
         if (EstaSuelto == false)
         {
-            print(objetoPadre.name);
-            objetoPadre.GetComponent<ObjetoPadre>().ReubicarPadre(transform.position);
+            if (!EsHijoDeOtraPieza)
+            {
+                //print(objetoPadre.name);
+                objetoPadre.GetComponent<ObjetoPadre>().ReubicarPadre(transform.position);
+
+                return objetoPadre;
+            }
+            else
+            {
+                return ElPadreDeEstaPieza.EstaSiendoSujetado();
+            }
             
-            return objetoPadre;
         }
         else
         {
-            print("se lleva al hijo");
+            print("se lleva al hijo"+name);
             //se lleva el objeto suelto
             estaDesarmado = true;
             return gameObject;

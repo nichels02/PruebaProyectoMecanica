@@ -452,6 +452,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 0}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
@@ -945,6 +947,8 @@ MonoBehaviour:
   padres:
   - {fileID: 1280239686}
   objetoPadre: {fileID: 571433786}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
@@ -1169,6 +1173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 571433786}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
@@ -1322,7 +1328,7 @@ GameObject:
   - component: {fileID: 389189700}
   m_Layer: 0
   m_Name: Tube009
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2588,7 +2594,7 @@ GameObject:
   - component: {fileID: 1132834141}
   m_Layer: 0
   m_Name: Tube005
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2988,6 +2994,8 @@ MonoBehaviour:
   padres:
   - {fileID: 360078168}
   objetoPadre: {fileID: 571433786}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
@@ -5145,6 +5153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 0}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 0}
   materialF: {fileID: 0}
@@ -5655,7 +5665,7 @@ GameObject:
   - component: {fileID: 8348486848100777197}
   m_Layer: 0
   m_Name: Tube009
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6282,6 +6292,8 @@ MonoBehaviour:
   padres:
   - {fileID: 7500678801090395926}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -6344,6 +6356,8 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 6389454739296075437}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -7041,6 +7055,8 @@ MonoBehaviour:
   - {fileID: 5144434836122399804}
   - {fileID: 8899592266448648975}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -7197,7 +7213,7 @@ GameObject:
   - component: {fileID: 7230425442523416961}
   m_Layer: 0
   m_Name: Tube005
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7319,6 +7335,8 @@ MonoBehaviour:
   padres:
   - {fileID: 8098375400675721737}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -7373,6 +7391,10 @@ PrefabInstance:
     - target: {fileID: 2109730570135176425, guid: 37db9e2c97fc8594b94888c0f5982bcb, type: 3}
       propertyPath: m_Name
       value: Jugador
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109730570135176425, guid: 37db9e2c97fc8594b94888c0f5982bcb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5002675902169187838, guid: 37db9e2c97fc8594b94888c0f5982bcb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7513,6 +7535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -8010,6 +8034,8 @@ MonoBehaviour:
   padres:
   - {fileID: 8846458024162779048}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 8846458024162779048}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -8149,6 +8175,8 @@ MonoBehaviour:
   - {fileID: 3461429151391406106}
   - {fileID: 8896799240708643853}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -8207,6 +8235,8 @@ MonoBehaviour:
   padres:
   - {fileID: 6387807666669469057}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -8287,7 +8317,7 @@ GameObject:
   - component: {fileID: 6410429333146743125}
   m_Layer: 0
   m_Name: Tube013
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8342,7 +8372,7 @@ GameObject:
   - component: {fileID: 8356884803311807126}
   m_Layer: 0
   m_Name: Tube011
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8470,6 +8500,8 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 4979408838477245935}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -8598,6 +8630,8 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 6389454739296075437}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -8636,7 +8670,7 @@ GameObject:
   - component: {fileID: 8667742150670522660}
   m_Layer: 0
   m_Name: Tube008
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8933,6 +8967,8 @@ MonoBehaviour:
   - {fileID: 8752402040317848629}
   - {fileID: 7445659750712384361}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -8986,6 +9022,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -9082,6 +9120,8 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -9162,6 +9202,8 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -9208,6 +9250,8 @@ MonoBehaviour:
   padres:
   - {fileID: 8846458024162779048}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 8846458024162779048}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -9296,7 +9340,7 @@ GameObject:
   - component: {fileID: 7649162396209506851}
   m_Layer: 0
   m_Name: Torus003
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9544,6 +9588,8 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 6389454739296075437}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -9694,6 +9740,8 @@ MonoBehaviour:
   padres:
   - {fileID: 8846458024162779048}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 8846458024162779048}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -9732,7 +9780,7 @@ GameObject:
   - component: {fileID: 8523277922263046884}
   m_Layer: 0
   m_Name: Torus002
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9772,6 +9820,8 @@ MonoBehaviour:
   padres:
   - {fileID: 8902878523644219988}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10009,6 +10059,8 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10067,6 +10119,8 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 4979408838477245935}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10156,6 +10210,8 @@ MonoBehaviour:
   padres:
   - {fileID: 1090312830865863931}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10335,6 +10391,8 @@ MonoBehaviour:
   padres:
   - {fileID: 6389454739296075437}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 6389454739296075437}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10381,6 +10439,8 @@ MonoBehaviour:
   padres:
   - {fileID: 8826223688232572759}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10461,6 +10521,8 @@ MonoBehaviour:
   padres:
   - {fileID: 8846458024162779048}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 8846458024162779048}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10499,7 +10561,7 @@ GameObject:
   - component: {fileID: 8742469196243337237}
   m_Layer: 0
   m_Name: Tube012
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10573,6 +10635,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10682,6 +10746,8 @@ MonoBehaviour:
   padres:
   - {fileID: 4979408838477245935}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10741,6 +10807,8 @@ MonoBehaviour:
   - {fileID: 8390840958772994046}
   - {fileID: 4513707694021315240}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10821,6 +10889,8 @@ MonoBehaviour:
   padres:
   - {fileID: 7554001784879113887}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 8846458024162779048}
+  EsHijoDeOtraPieza: 1
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -10875,6 +10945,8 @@ MonoBehaviour:
   padres:
   - {fileID: 7479309556358866300}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -11009,6 +11081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   padres: []
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -11067,6 +11141,8 @@ MonoBehaviour:
   padres:
   - {fileID: 7401162158308750680}
   objetoPadre: {fileID: 1090312830865863930}
+  ElPadreDeEstaPieza: {fileID: 0}
+  EsHijoDeOtraPieza: 0
   EstaSuelto: 0
   materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
   materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
@@ -11267,7 +11343,7 @@ GameObject:
   - component: {fileID: 9171110390784549559}
   m_Layer: 0
   m_Name: Torus001
-  m_TagString: Untagged
+  m_TagString: objeto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

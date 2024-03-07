@@ -19,7 +19,7 @@
                     "type": "Value",
                     "id": "3287e276-07e8-4367-96f7-101d898286e8",
                     "expectedControlType": "Vector3",
-                    "processors": "ScaleVector3(x=5,y=5,z=5)",
+                    "processors": "ScaleVector3",
                     "interactions": "",
                     "initialStateCheck": true
                 },
