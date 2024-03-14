@@ -507,6 +507,7 @@ GameObject:
   - component: {fileID: 64967447}
   - component: {fileID: 64967450}
   - component: {fileID: 64967449}
+  - component: {fileID: 64967451}
   m_Layer: 0
   m_Name: HorquillaSuperiorYTapaSuperior
   m_TagString: Untagged
@@ -529,7 +530,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -735,8 +736,22 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &64967451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64967446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2a9ef637604d4fa07cbf98ed9093a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xd: {fileID: 0}
+  tagName: 
 --- !u!1 &73342048
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +764,7 @@ GameObject:
   - component: {fileID: 73342049}
   - component: {fileID: 73342052}
   - component: {fileID: 73342051}
+  - component: {fileID: 73342053}
   m_Layer: 0
   m_Name: Piston
   m_TagString: Untagged
@@ -771,7 +787,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -981,8 +997,22 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &73342053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73342048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2a9ef637604d4fa07cbf98ed9093a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xd: {fileID: 0}
+  tagName: 
 --- !u!1 &103894858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,6 +2127,7 @@ GameObject:
   - component: {fileID: 370118381}
   - component: {fileID: 370118384}
   - component: {fileID: 370118383}
+  - component: {fileID: 370118385}
   m_Layer: 0
   m_Name: TuboDelCilindro
   m_TagString: Untagged
@@ -2119,7 +2150,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2318,8 +2349,22 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &370118385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370118380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2a9ef637604d4fa07cbf98ed9093a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xd: {fileID: 0}
+  tagName: 
 --- !u!1 &381012242
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,6 +2377,7 @@ GameObject:
   - component: {fileID: 381012243}
   - component: {fileID: 381012246}
   - component: {fileID: 381012245}
+  - component: {fileID: 381012247}
   m_Layer: 0
   m_Name: Vastago
   m_TagString: Untagged
@@ -2354,7 +2400,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2553,8 +2599,22 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &381012247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381012242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2a9ef637604d4fa07cbf98ed9093a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xd: {fileID: 0}
+  tagName: 
 --- !u!1 &423528474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,6 +2774,8 @@ GameObject:
   - component: {fileID: 440020635}
   - component: {fileID: 440020638}
   - component: {fileID: 440020637}
+  - component: {fileID: 440020639}
+  - component: {fileID: 440020640}
   m_Layer: 0
   m_Name: HorquillaInferior
   m_TagString: Untagged
@@ -2736,7 +2798,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2937,8 +2999,37 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &440020639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440020634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7604806365d87bc4dbc3633a26428c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagCodigo: 
+  velocidad: 0
+  prueba: 0
+--- !u!114 &440020640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440020634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2a9ef637604d4fa07cbf98ed9093a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xd: {fileID: 0}
+  tagName: 
 --- !u!1 &462858094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4165,6 +4256,7 @@ GameObject:
   - component: {fileID: 708056641}
   - component: {fileID: 708056644}
   - component: {fileID: 708056643}
+  - component: {fileID: 708056645}
   m_Layer: 0
   m_Name: TapaCilindro
   m_TagString: Untagged
@@ -4187,7 +4279,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4391,8 +4483,22 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &708056645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708056640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a2a9ef637604d4fa07cbf98ed9093a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xd: {fileID: 0}
+  tagName: 
 --- !u!1 &708472314
 GameObject:
   m_ObjectHideFlags: 0
@@ -4538,7 +4644,13 @@ MonoBehaviour:
   - {fileID: 645093085}
   - {fileID: 103894860}
   colorBase: {r: 0, g: 0, b: 0, a: 0}
-  listaPiezasSemiArmadas: []
+  listaPiezasSemiArmadas:
+  - {fileID: 2081090016}
+  - {fileID: 342832419}
+  - {fileID: 1265767725}
+  - {fileID: 1360214448}
+  - {fileID: 1954714329}
+  - {fileID: 1399942993}
 --- !u!4 &721382273
 Transform:
   m_ObjectHideFlags: 0

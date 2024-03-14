@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    public void GotoArmado()
+
+    public void Armado()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene(1);
     }
-    public void GotoDesarmado()
+    public void Desarmado()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene(0);
     }
 }

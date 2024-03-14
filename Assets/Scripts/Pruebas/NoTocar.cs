@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 //public enum Piezas { pieza1, pieza2, pieza3, pieza4, pieza5, pieza6, pieza7 }
@@ -72,3 +72,4 @@ public class NoTocar : MonoBehaviour
         }
     }
 }
+*/

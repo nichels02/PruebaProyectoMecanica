@@ -13,6 +13,7 @@ public class GameManager2 : MonoBehaviour
     // Lista de piezas semiArmadas
     [SerializeField] List<TagsPiezas> listaPiezasSemiArmadas;
     int ii;
+    int yy;
     // Propiedad para acceder a la instancia del GameManager2
     public static GameManager2 Instance
     {
@@ -71,6 +72,22 @@ public class GameManager2 : MonoBehaviour
                 //Transform hijoObjeto = listaPiezas[i].transform.GetChild(0);
                 //Renderer renderer1 = hijoObjeto.GetComponent<Renderer>();
                 //renderer1.material.color = Color.black;
+
+            }
+        }
+    }
+    public void BusquedaReferenciaObjetoSemiArmados(GameObject nombre)
+    {
+        for (int i = 0; i < listaPiezas.Count; i++)
+        {
+            if (listaPiezasSemiArmadas[i].tagCodigo == nombre.GetComponent<MoveToCorrectPosition>().tagName)
+            {
+                yy = i;
+                if (i>0 && i<6)
+                {
+                    Grupo7();
+                }
+                
 
             }
         }
@@ -217,16 +234,39 @@ public class GameManager2 : MonoBehaviour
     public void Grupo5()
     {
         PintarPieza();
+        //29-- orden 29
     }
     public void Grupo6()
     {
         PintarPieza();
+        //30 -- orden 30
     }
     public void PintarPieza()
     {
         Transform hijoObjeto = listaPiezas[ii].transform.GetChild(0);
         Renderer renderer1 = hijoObjeto.GetComponent<Renderer>();
         renderer1.material.color = Color.black;
+    }
+    public void Grupo7()
+    {
+        if (yy == 5)
+        {
+            PintarPieza();
+        }
+        else if ((yy == 2 || yy==3) && listaPiezas[5].prueba)
+        {
+            PintarPieza();
+        }else if (yy == 0 && (listaPiezas[3].prueba && listaPiezas[2].prueba))
+        {
+            PintarPieza();
+        }else if (yy == 4 && listaPiezas[0].prueba)
+        {
+            PintarPieza();
+        }
+        else if (yy == 1 && listaPiezas[4].prueba)
+        {
+            PintarPieza();
+        }
     }
 }
 
@@ -257,3 +297,17 @@ public class GameManager2 : MonoBehaviour
  * grupo 6
  * 30 -- orden 30
  */
+
+/*Grupo7
+ 
+1.0     3
+1.1     5
+1.2     2
+1.3     2
+1.4     4   
+1.5     1
+
+
+
+ */
+

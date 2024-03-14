@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 
 public class remplazoSeñalizar : MonoBehaviour
@@ -84,6 +85,12 @@ public class remplazoSeñalizar : MonoBehaviour
                 objetoColicionado.transform.parent = transform;
             }
         }
+        /*
+        else if(inputSujetar == 1 && objetoColicionado != null && objetoColicionado.tag == "objeto" && !estaSujetado)
+        {
+
+        }
+        */
         else if(inputSujetar == 0 && estaSujetado == true)
         {
             if (EstanAgarrandoElPadre == true)
@@ -140,6 +147,11 @@ public class remplazoSeñalizar : MonoBehaviour
         if (objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Interaccion>()) 
         {
             objetoColicionado.GetComponent<Interaccion>().desarmar();
+        }
+        else if(objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Button>())
+        {
+            print("llego al boton");
+            objetoColicionado.GetComponent<Button>().Press();
         }
     }
 
