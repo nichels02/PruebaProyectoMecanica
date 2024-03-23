@@ -7,13 +7,15 @@ public class Anclaje : MonoBehaviour
     [SerializeField] List<Anclaje> padres = new List<Anclaje>();
     [SerializeField] GameObject objetoPadre;
     [SerializeField] Anclaje ElPadreDeEstaPieza;
-    [SerializeField] bool EsHijoDeOtraPieza = false;
-    bool estaDesarmado = false;
+    public bool EsHijoDeOtraPieza = false;
+    public bool estaDesarmado = false;
     public bool EstaSuelto = false;
     Renderer MyRenderer;
     Material MaterialGuardado;
     [SerializeField] Material materialT;
     [SerializeField] Material materialF;
+    public bool EsteTieneOtroCollider;
+    public Collider ElCollider;
 
 
 
@@ -21,6 +23,8 @@ public class Anclaje : MonoBehaviour
     private void Start()
     {
         MyRenderer = GetComponent<Renderer>();
+        ElCollider = GetComponent<Collider>();
+        ElCollider.enabled = false;
         MaterialGuardado = MyRenderer.material;
     }
     public GameObject EstaSiendoSujetado()
@@ -43,6 +47,10 @@ public class Anclaje : MonoBehaviour
         }
         else
         {
+            if (EsteTieneOtroCollider)
+            {
+                ElCollider.enabled = true;
+            }
             print("se lleva al hijo"+name);
             //se lleva el objeto suelto
             estaDesarmado = true;

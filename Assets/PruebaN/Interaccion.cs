@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Interaccion : MonoBehaviour
 {
-    [SerializeField] Anclaje Objeto;
+    public Anclaje Objeto;
 
     
 

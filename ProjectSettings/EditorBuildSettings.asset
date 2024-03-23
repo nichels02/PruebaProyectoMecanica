@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/New Scene.unity
     guid: b3ec23c50d60af34a9bb63ccf3eb7d5d
   - enabled: 1
-    path: Assets/PruebaN/New Scene.unity
-    guid: 70d977e157625854ca018a35211d5477
+    path: Assets/PruebaN/DesarmadoFinal.unity
+    guid: 9a6032abd42c9894a9c9781a19e6aece
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ad9f6bec3b665a54ea9e0ff395525574, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: e8b62e2fa73eb974e92cc77e89ecb95c, type: 2}

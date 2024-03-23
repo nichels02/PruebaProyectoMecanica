@@ -1401,8 +1401,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3785620188189482708}
-  - component: {fileID: 6347806925774558062}
   - component: {fileID: 3222024196355388627}
+  - component: {fileID: 1495041298515604921}
   m_Layer: 0
   m_Name: CilindroFinalDesarmado
   m_TagString: objeto
@@ -1445,7 +1445,19 @@ Transform:
   - {fileID: 881131277618011446}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6347806925774558062
+--- !u!114 &3222024196355388627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722793009257801920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc22f8b168f4a24caf9bdb300f4f227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1495041298515604921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1462,20 +1474,8 @@ MonoBehaviour:
   ElPadreDeEstaPieza: {fileID: 0}
   EsHijoDeOtraPieza: 0
   EstaSuelto: 0
-  materialT: {fileID: 0}
-  materialF: {fileID: 0}
---- !u!114 &3222024196355388627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722793009257801920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc22f8b168f4a24caf9bdb300f4f227, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  materialT: {fileID: 2100000, guid: f45e75e69ac20ec43bb22565ab268ec4, type: 2}
+  materialF: {fileID: 2100000, guid: 508fc67c31c84cc4881f8c1f3ad73399, type: 2}
 --- !u!1 &1812604129860024718
 GameObject:
   m_ObjectHideFlags: 0
@@ -7146,7 +7146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   padres:
-  - {fileID: 6347806925774558062}
+  - {fileID: 0}
   objetoPadre: {fileID: 1722793009257801920}
   ElPadreDeEstaPieza: {fileID: 0}
   EsHijoDeOtraPieza: 0

@@ -8,10 +8,10 @@ public class MenuController : MonoBehaviour
 
     public void Armado()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void Desarmado()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
