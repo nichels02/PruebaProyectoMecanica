@@ -125,7 +125,7 @@ public class remplazoSeñalizar : MonoBehaviour
                 objetoColicionadoPadre.transform.rotation = Quaternion.Euler(elvector);
                 print("evento moverse" + name);
             }
-            else
+            else if (estaSujetado)
             {
                 Vector3 elvector = new Vector3(LaRotacion.y, LaRotacion.x * -1, 0);
                 elvector = objetoColicionado.transform.localRotation.eulerAngles + elvector * Time.deltaTime * 100;
@@ -142,7 +142,7 @@ public class remplazoSeñalizar : MonoBehaviour
 
     public void EventDesarmar(InputAction.CallbackContext value)
     {
-        print("evento desarmar" + name);
+        //print("evento desarmar" + name);
         float inputDesarmar = value.ReadValue<float>();
         if (objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Interaccion>()) 
         {
@@ -150,7 +150,7 @@ public class remplazoSeñalizar : MonoBehaviour
         }
         else if(objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Button>())
         {
-            print("llego al boton");
+            //print("llego al boton");
             objetoColicionado.GetComponent<Button>().onClick.Invoke();
         }
     }
@@ -199,7 +199,7 @@ public class remplazoSeñalizar : MonoBehaviour
     {
         //print(objeto.name);
         float distancia = Vector3.Distance(objeto.transform.position, transform.position);
-        if (distancia > 2)
+        if (distancia > 1)
         {
             // Acercar
             Vector3 direction = (transform.position - PosicionParaRemplazar).normalized;

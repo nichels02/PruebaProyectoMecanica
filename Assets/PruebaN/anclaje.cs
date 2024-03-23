@@ -72,7 +72,7 @@ public class Anclaje : MonoBehaviour
     }
     public GameObject EstaSiendoSujetado()
     {
-        print("llego al metodo de sujertar" + name);
+        //print("llego al metodo de sujertar" + name);
         if (EstaSuelto == false)
         {
             if (!EsHijoDeOtraPieza)
@@ -94,7 +94,7 @@ public class Anclaje : MonoBehaviour
             {
                 ElCollider.enabled = true;
             }
-            print("se lleva al hijo"+name);
+            //print("se lleva al hijo"+name);
             //se lleva el objeto suelto
             estaDesarmado = true;
             return gameObject;
