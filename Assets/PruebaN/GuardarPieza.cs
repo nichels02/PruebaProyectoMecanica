@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GuardarPieza : MonoBehaviour
 {
-    [SerializeField] GameObject LaPieza;
+    [SerializeField] NombreDePieza ElNombre;
     [SerializeField] GameObject PosicionGuardar;
+    Anclaje LaPieza;
 
+    /*
     private void Start()
     {
         if (LaPieza.GetComponent<Interaccion>().Objeto.EsteTieneOtroCollider)
@@ -14,16 +16,35 @@ public class GuardarPieza : MonoBehaviour
             LaPieza = LaPieza.GetComponent<Interaccion>().Objeto.gameObject;
         }
     }
+    */
     private void OnTriggerEnter(Collider other)
     {
-        if (other == LaPieza)
+        if (other.GetComponent<Interaccion>() && other.GetComponent<Interaccion>().Objeto.estaDesarmado && other.GetComponent<Interaccion>().Objeto.ElNombre==ElNombre)   
         {
-            if((LaPieza.GetComponent<Interaccion>() && LaPieza.GetComponent<Interaccion>().Objeto.estaDesarmado) ||
-                (LaPieza.GetComponent<Anclaje>() && LaPieza.GetComponent<Anclaje>().estaDesarmado))
-            {
-                LaPieza.transform.position = PosicionGuardar.transform.position;
-                LaPieza.tag = "YaSeGuardo";
-            }
+            LaPieza = other.GetComponent<Interaccion>().Objeto;
+            posicionar();
+            //LaPieza.transform.position = PosicionGuardar.transform.position;
+            //LaPieza.tag = "YaSeGuardo";
+        }
+        else if (other.GetComponent<Anclaje>() && other.GetComponent<Anclaje>().estaDesarmado && other.GetComponent<Anclaje>().ElNombre == ElNombre)
+        {
+            LaPieza = other.GetComponent<Anclaje>();
+            posicionar();
         }
     }
+
+
+
+
+    void posicionar()
+    {
+        LaPieza.transform.position = PosicionGuardar.transform.position;
+        LaPieza.transform.rotation = PosicionGuardar.transform.rotation;
+        LaPieza.tag = "YaSeGuardo";
+        this.enabled = false;
+    }
+
+
+
+
 }

@@ -151,7 +151,7 @@ public class remplazoSeñalizar : MonoBehaviour
         else if(objetoColicionado != null && !estaSujetado && inputDesarmar == 1 && objetoColicionado.GetComponent<Button>())
         {
             print("llego al boton");
-            objetoColicionado.GetComponent<Button>().Press();
+            objetoColicionado.GetComponent<Button>().onClick.Invoke();
         }
     }
 
