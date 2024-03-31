@@ -5,19 +5,17 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class MoveToCorrectPosition : MonoBehaviour
 {
-    public XRGrabInteractable xd;
     public string tagName;
-    Rigidbody rb;
+    [SerializeField] Transform manoDerecha;
+    [SerializeField] Transform manoIzquierda;
 
     private void Awake()
     {
         tagName = gameObject.name;
-        rb = GetComponent<Rigidbody>();
-        xd = GetComponent<XRGrabInteractable>();
     }
     private void Update()
     {
-        if (transform.parent == null)
+        if (transform.parent == manoDerecha || transform.parent == manoIzquierda)
         {
             GameManager2.Instance.BusquedaReferenciaObjeto(this.gameObject);
         }

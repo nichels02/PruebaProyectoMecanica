@@ -28,9 +28,8 @@ public class TagsPiezas : MonoBehaviour
         if (other.GetComponent<MoveToCorrectPosition>().tagName == tagCodigo)
         {
             prueba = true;
-            other.gameObject.GetComponent<Rigidbody>().useGravity = false;
-            other.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-            other.GetComponent<MoveToCorrectPosition>().xd.enabled = false;
+            /*other.gameObject.GetComponent<Rigidbody>().useGravity = false;
+            other.gameObject.GetComponent<Rigidbody>().isKinematic = true;*/
             prueba3 = other.transform;
             
             print(other.transform.position);
