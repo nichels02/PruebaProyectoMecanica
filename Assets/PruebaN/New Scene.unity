@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1755,7 +1755,7 @@ PrefabInstance:
     - target: {fileID: 2430449925510942889, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: cc2bfa86b4d14c94596b41da2e6e6340, type: 2}
     - target: {fileID: 2736777089388246714, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1764,6 +1764,14 @@ PrefabInstance:
       propertyPath: LaRotacion
       value: 
       objectReference: {fileID: 424126525}
+    - target: {fileID: 3049055205872840230, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc2bfa86b4d14c94596b41da2e6e6340, type: 2}
+    - target: {fileID: 3460004783464726091, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc2bfa86b4d14c94596b41da2e6e6340, type: 2}
     - target: {fileID: 3663946764771233268, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
       propertyPath: LaRotacion
       value: 
@@ -1860,6 +1868,10 @@ PrefabInstance:
       propertyPath: LaRotacion
       value: 
       objectReference: {fileID: 424126525}
+    - target: {fileID: 5034225691381646051, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc2bfa86b4d14c94596b41da2e6e6340, type: 2}
     - target: {fileID: 5258838770589039896, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1868,6 +1880,10 @@ PrefabInstance:
       propertyPath: LaRotacion
       value: 
       objectReference: {fileID: 424126525}
+    - target: {fileID: 5700632409239813589, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93f5bbbee334b5d47bbd8033c9513f17, type: 2}
     - target: {fileID: 6103887836683140838, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1888,6 +1904,10 @@ PrefabInstance:
       propertyPath: LaRotacion
       value: 
       objectReference: {fileID: 424126525}
+    - target: {fileID: 6931799746131674380, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc2bfa86b4d14c94596b41da2e6e6340, type: 2}
     - target: {fileID: 7014019679094550646, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

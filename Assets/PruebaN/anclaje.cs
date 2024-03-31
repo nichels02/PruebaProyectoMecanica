@@ -3,50 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum NombreDePieza
-{
-    pieza1,
-    pieza2,
-    pieza3,
-    pieza4,
-    pieza5,
-    pieza6,
-    pieza7,
-    pieza8,
-    pieza9,
-    pieza10,
-    pieza11,
-    pieza12,
-    pieza13,
-    pieza14,
-    pieza15,
-    pieza16,
-    pieza17,
-    pieza18,
-    pieza19,
-    pieza20,
-    pieza31,
-    pieza32,
-    pieza33,
-    horquilla,
-    cabezalTrasero,
-    cabezalDelantero,
-    emboloTrasero,
-    emboloDelantero,
-    vastago,
-    anillosDeDesgaste,
-    tornillo,
-    volandas,
-    tubo,
-    sellosDeBastago,
-    sellosDelPiston,
-    sellosAmortiguadores,
-    g
-}
+
 
 public class Anclaje : MonoBehaviour
 {
-    public NombreDePieza ElNombre;
     [SerializeField] List<Anclaje> padres = new List<Anclaje>();
     [SerializeField] GameObject objetoPadre;
     [SerializeField] Anclaje ElPadreDeEstaPieza;
@@ -59,6 +19,7 @@ public class Anclaje : MonoBehaviour
     [SerializeField] Material materialF;
     public bool EsteTieneOtroCollider;
     public Collider ElCollider;
+    [SerializeField] bool EsteSiSeDesarmara;
 
 
 
@@ -96,6 +57,10 @@ public class Anclaje : MonoBehaviour
             }
             //print("se lleva al hijo"+name);
             //se lleva el objeto suelto
+            if (!estaDesarmado)
+            {
+                SingletonVolverAlMenu.instance.YaEstaSujetada();
+            }
             estaDesarmado = true;
             return gameObject;
         }
@@ -135,7 +100,10 @@ public class Anclaje : MonoBehaviour
 
     void SiSeDesarmara()
     {
-        GetComponent<MovimientoPreciso>().DebeRotar = true;
+        if (!EsteSiSeDesarmara)
+        {
+            GetComponent<MovimientoPreciso>().DebeRotar = true;
+        }
     }
 
 

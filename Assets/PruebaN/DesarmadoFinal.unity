@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -678,6 +678,51 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.034962337, y: 0.034962337, z: 0.0040000114}
   m_Center: {x: 9.313227e-10, y: -9.313245e-10, z: -0.000000004540198}
+--- !u!1 &972166641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 972166643}
+  - component: {fileID: 972166642}
+  m_Layer: 0
+  m_Name: ElControlador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &972166642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972166641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa287143d9c323e408a73836c4cfab48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LasPiezas: 30
+--- !u!4 &972166643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972166641}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.3463545, y: 3.4015725, z: 5.461159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &999239174 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4609868724204154147, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
@@ -1160,6 +1205,10 @@ PrefabInstance:
       propertyPath: EsteTieneOtroCollider
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2233217901904490150, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
+      propertyPath: EsteSiSeDesarmara
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2331042376327578053, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
       propertyPath: escalaInicial.x
       value: 0.85
@@ -1367,6 +1416,10 @@ PrefabInstance:
     - target: {fileID: 8593647408573302177, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
       propertyPath: ElNombre
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675217383975073437, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8825650538600833804, guid: 8dbe05888c445a742936347c795e2b1b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1622,3 +1675,4 @@ SceneRoots:
   - {fileID: 1793776839}
   - {fileID: 633300354}
   - {fileID: 1082786037}
+  - {fileID: 972166643}

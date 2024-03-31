@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GuardarPieza : MonoBehaviour
 {
-    [SerializeField] NombreDePieza ElNombre;
+    /*
+    //[SerializeField] NombreDePieza ElNombre;
     [SerializeField] GameObject PosicionGuardar;
     Anclaje LaPieza;
 
@@ -66,5 +67,5 @@ public class GuardarPieza : MonoBehaviour
 
 
 
-
+    */
 }
