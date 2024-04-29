@@ -9,7 +9,7 @@ public class Tiempo : MonoBehaviour
     [SerializeField] TMP_Text TextoTiempo;
     [SerializeField] GameObject PanelDePerdiste;
     float x;
-    int minutos = 2;
+    int minutos = 5;
     int segundos = 0;
     bool recargaEscenaRealizada;
     bool Perdio;
@@ -32,16 +32,15 @@ public class Tiempo : MonoBehaviour
         {
             segundos = 59;
             minutos = minutos!=0 ? minutos-1 : 0;
-            TextoTiempo.text = minutos + " : " + segundos;
+            
         }
         else if(segundos == -1 && minutos == 0)
         {
             segundos = 0;
             Perdio = true;
-            TextoTiempo.text = minutos + " : " + segundos;
             PanelDePerdiste.SetActive(true);
         }
-        
+        TextoTiempo.text = minutos + " : " + segundos;
         return 0;
         
     }
